@@ -1,6 +1,19 @@
+import { SiteConfig } from '@ryan-blackman/ryan-bakes-cms';
+import { createDataHook, isServerSidePropsContext } from 'next-data-hooks';
 import { ReactNode } from 'react';
-import useSiteConfig from '../../hooks/data-hooks/useSiteConfig';
+import sanityClient from '../../sanity/sanityClient';
 import Metadata, { AcceptedPages } from './metadata/metadata';
+
+const siteConfigId = process.env.SITE_CONFIG_KEY ?? 'siteConfig';
+
+export const useSiteConfig = createDataHook<SiteConfig>(siteConfigId, async (context) => {
+	if (isServerSidePropsContext(context)) {
+		throw new Error('This hook is only intended to be used in getStaticProps');
+	}
+
+	const siteConfig = await sanityClient.get('siteConfig', siteConfigId);
+	return siteConfig;
+});
 
 interface Props {
 	children: ReactNode;

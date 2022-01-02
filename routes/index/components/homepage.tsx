@@ -1,5 +1,4 @@
 import ApplicationPage from '../../../components/shared/applicatonPage';
-import useSiteConfig from '../../../hooks/data-hooks/useSiteConfig';
 
 function HomePage() {
 	return (
@@ -9,6 +8,6 @@ function HomePage() {
 	);
 }
 
-HomePage.dataHooks = [useSiteConfig];
+HomePage.dataHooks = ApplicationPage.dataHooks;
 
 export default HomePage;
