@@ -28,7 +28,7 @@ function ApplicationPage({ page, hero, children }: Props) {
 		<>
 			<Metadata config={config} page={page} />
 			<main>
-				{hero && <div className="hero-wrap">{hero}</div>}
+				{hero || null}
 				<div className="content">{children}</div>
 			</main>
 		</>

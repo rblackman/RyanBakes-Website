@@ -1,17 +1,27 @@
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import { ImageWithAlt } from '@ryan-blackman/ryan-bakes-cms';
 import { ImageUrlBuilder, useNextSanityImage, UseNextSanityImageBuilderOptions } from 'next-sanity-image';
 import type { ImageProps } from 'next/image';
 import Image from 'next/image';
 import { useCallback, useMemo } from 'react';
 import { basicClient } from '../../sanity/sanityClient';
 
-interface Props extends Omit<ImageProps, 'src' | 'width' | 'height'> {
-	src: SanityImageSource;
+interface Props extends Omit<ImageProps, 'src' | 'width' | 'height' | 'alt' | 'layout'> {
+	src: ImageWithAlt;
 	width: number;
 	height: number;
+	layout: 'fill' | 'fixed' | 'intrinsic' | 'responsive';
 }
 
 export default function SanityImage({ src, width, height, ...rest }: Props) {
+	const { alt: altText, emptyAlt } = src;
+
+	const alt = useMemo(() => {
+		if (emptyAlt) {
+			return '';
+		}
+		return altText;
+	}, [altText, emptyAlt]);
+
 	const aspectRatio = useMemo(() => width / height, [width, height]);
 
 	const imageBuilder: (imageUrlBuilder: ImageUrlBuilder, options: UseNextSanityImageBuilderOptions) => ImageUrlBuilder = useCallback(
@@ -34,5 +44,5 @@ export default function SanityImage({ src, width, height, ...rest }: Props) {
 	};
 
 	// eslint-disable-next-line react/jsx-props-no-spreading
-	return <Image {...props} />;
+	return <Image alt={alt} {...props} />;
 }

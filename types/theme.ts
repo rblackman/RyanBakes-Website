@@ -20,8 +20,21 @@ export interface Typography {
 	baseLineHeight: number;
 }
 
+export interface BreakPoint {
+	maxWidth: number;
+	heroAspectRatio: { w: number; h: number };
+}
+
+export interface BreakPoints {
+	mobile: BreakPoint;
+	tablet: BreakPoint;
+	desktop: BreakPoint;
+	largeDesktop: BreakPoint;
+}
+
 export default interface Theme {
 	baseSpacing: number;
 	colors: Colors;
 	typography: Typography;
+	breakpoints: BreakPoints;
 }

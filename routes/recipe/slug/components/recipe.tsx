@@ -1,5 +1,6 @@
 import { Recipe as RecipeType } from '@ryan-blackman/ryan-bakes-cms';
 import { createDataHook, isServerSidePropsContext } from 'next-data-hooks';
+import Hero from '../../../../components/generic/hero';
 import ApplicationPage from '../../../../components/shared/applicatonPage';
 import sanityClient from '../../../../sanity/sanityClient';
 
@@ -25,10 +26,10 @@ export const useRecipe = createDataHook<RecipeType>('useRecipe', async (context)
 
 function Recipe() {
 	const recipe = useRecipe();
-	const { title } = recipe;
+	const { title, picture } = recipe;
 	return (
-		<ApplicationPage page={recipe}>
-			<h1>Recipe: {title}</h1>
+		<ApplicationPage page={recipe} hero={<Hero title={title} image={picture} />}>
+			<p>Foo</p>
 		</ApplicationPage>
 	);
 }
