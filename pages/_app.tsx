@@ -1,8 +1,20 @@
-import type { AppProps } from 'next/app';
-import '../styles/globals.css';
+/* eslint-disable react/jsx-props-no-spreading */
 
-function MyApp({ Component, pageProps }: AppProps) {
-	// eslint-disable-next-line react/jsx-props-no-spreading
-	return <Component {...pageProps} />;
+import { NextDataHooksProvider } from 'next-data-hooks';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from '../styles/globalStyles';
+import Theme from '../styles/theme';
+
+export default function MyApp({ Component, pageProps }: AppProps) {
+	const { children, ...rest } = pageProps;
+
+	return (
+		<ThemeProvider theme={Theme}>
+			<GlobalStyles />
+			<NextDataHooksProvider {...rest}>
+				<Component {...rest}>{children}</Component>
+			</NextDataHooksProvider>
+		</ThemeProvider>
+	);
 }
-export default MyApp;

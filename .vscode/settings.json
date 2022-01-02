@@ -1,6 +1,7 @@
 {
 	"cSpell.words": [
-		"gtag"
+		"gtag",
+		"serializers"
 	],
 	"files.trimTrailingWhitespace": true,
 	"files.trimFinalNewlines": true,
@@ -32,5 +33,15 @@
 	},
 	"[graphql]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"markdownlint.config": {
+		"MD028": false,
+		"MD025": {
+			"front_matter_title": ""
+		}
+	},
+	"files.associations": {
+		"*.env.development": "env",
+		"*.env.production": "env"
 	}
 }
