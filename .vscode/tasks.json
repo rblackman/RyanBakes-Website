@@ -1,0 +1,52 @@
+{
+	"tasks": [
+		{
+			"detail": "Next.JS Production Build",
+			"group": "build",
+			"label": "Build",
+			"problemMatcher": [],
+			"script": "build",
+			"type": "npm"
+		},
+		{
+			"detail": "Next.JS Dev Server",
+			"group": "build",
+			"label": "Serve - Dev",
+			"problemMatcher": [],
+			"script": "dev",
+			"type": "npm"
+		},
+		{
+			"detail": "Next.JS Production Server",
+			"group": "build",
+			"label": "Serve - Production",
+			"problemMatcher": [],
+			"script": "start",
+			"type": "npm"
+		},
+		{
+			"detail": "Run eslint and generate HTML report",
+			"group": "test",
+			"label": "Linting Report",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"script": "report",
+			"type": "npm"
+		},
+		{
+			"detail": "Run eslint and try to fix problems.",
+			"group": "test",
+			"label": "Lint",
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"script": "lint",
+			"type": "npm"
+		}
+	],
+	"version": "2.0.0"
+}
