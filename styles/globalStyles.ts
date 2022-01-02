@@ -7,12 +7,6 @@ export default createGlobalStyle`
   margin: 0;
 }
 
-:root{
-	--plyr-color-main: ${({ theme }) => theme.colors.secondary.color};
-	--plyr-video-control-color-hover: ${({ theme }) => theme.colors.primary.contrastColor};
-	--plyr-range-fill-background:${({ theme }) => theme.colors.secondary.color};;
-}
-
 html {
 	font-size: ${({ theme }) => theme.typography.baseFontSize}px;
 }
@@ -44,7 +38,7 @@ header, main, footer {
 	margin: 0 auto;
 }
 
-main {
+.content {
   padding: clamp(5vh, ${baseSpacing(6)}, 50vh) clamp(${baseSpacing()}, 5vw, ${baseSpacing(3)}) ${baseSpacing()};
 
 	@media only screen and (max-width: 660px){
