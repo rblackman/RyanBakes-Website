@@ -6,7 +6,7 @@ const Theme: ThemeType = {
 			color: '#0d19a3',
 			contrastColor: '#ffffff',
 			background: '#ffffff',
-			text: '#ffffff'
+			text: '#000000'
 		},
 		secondary: {
 			color: '#15db95',

@@ -1,4 +1,5 @@
 import { ImageWithAlt } from '@ryan-blackman/ryan-bakes-cms';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 import baseSpacing from '../../helpers/styled-components/baseSpacing';
 import responsiveAspectRatio from '../../helpers/styled-components/responsiveAspectRatio';
@@ -7,8 +8,9 @@ import useHeroImage from '../../hooks/useHeroImage';
 import Theme from '../../types/theme';
 
 interface Props {
-	title: string;
 	image: ImageWithAlt;
+	title: ReactNode;
+	subTitle?: ReactNode | undefined;
 }
 
 const HeroContainer = styled.div`
@@ -26,26 +28,42 @@ const HeroContainer = styled.div`
 	place-content: end start;
 `;
 
-const Heading = styled.h1`
+const HeadingWrap = styled.div`
 	${themeColor((t) => t.colors.primary, 'dd')}
 	padding: ${baseSpacing(1)} ${baseSpacing(4)};
 	max-width: 90vw;
 	backdrop-filter: blur(5px);
 	margin: 0 0 ${baseSpacing()};
-	font-size: 2rem;
 
 	@media (min-width: ${({ theme }: { theme: Theme }) => theme.breakpoints.tablet.maxWidth + 1}px) {
-		font-size: 4rem;
 		padding: ${baseSpacing(1)} ${baseSpacing(6)};
 	}
 `;
 
-export default function Hero({ title, image }: Props) {
+const Heading = styled.h1`
+	font-size: 2rem;
+
+	@media (min-width: ${({ theme }: { theme: Theme }) => theme.breakpoints.tablet.maxWidth + 1}px) {
+		font-size: 4rem;
+	}
+`;
+const SubHeading = styled.div`
+	margin: 0;
+`;
+
+export default function Hero({ title, subTitle, image }: Props) {
 	const backgroundImage = useHeroImage(image);
 
 	return (
 		<HeroContainer style={{ backgroundImage }}>
-			<Heading>{title}</Heading>
+			<HeadingWrap>
+				<Heading>{title}</Heading>
+				{subTitle && <SubHeading>{subTitle}</SubHeading>}
+			</HeadingWrap>
 		</HeroContainer>
 	);
 }
+
+Hero.defaultProps = {
+	subTitle: undefined
+};
