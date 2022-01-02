@@ -7,7 +7,8 @@
 			"styled-components",
 			{
 				"ssr": true
-			}
+			},
+			"next-data-hooks/babel"
 		]
 	]
 }
