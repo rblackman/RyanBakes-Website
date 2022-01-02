@@ -28,7 +28,7 @@ const HeroContainer = styled.div`
 
 const Heading = styled.h1`
 	${themeColor((t) => t.colors.primary, 'dd')}
-	padding: ${baseSpacing(0.5)} ${baseSpacing(4)};
+	padding: ${baseSpacing(1)} ${baseSpacing(4)};
 	max-width: 90vw;
 	backdrop-filter: blur(5px);
 	margin: 0 0 ${baseSpacing()};
