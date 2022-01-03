@@ -9,7 +9,11 @@ interface Props {
 function Unit({ display, unit: { _ref: unitRef } }: Props) {
 	const units = useUnits();
 
-	const { name, abbreviation } = units.filter(({ _id }) => _id === unitRef)[0];
+	const { name, abbreviation, exempt } = units.filter(({ _id }) => _id === unitRef)[0];
+
+	if (exempt) {
+		return null;
+	}
 
 	return <span>{(display || 'short') === 'short' ? abbreviation : name}</span>;
 }

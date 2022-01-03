@@ -5,7 +5,7 @@
 		"url": "https://github.com/rblackman"
 	},
 	"dependencies": {
-		"@ryan-blackman/ryan-bakes-cms": "^1.0.5",
+		"@ryan-blackman/ryan-bakes-cms": "^1.0.6",
 		"@sanity/client": "^2.23.2",
 		"@sanity/image-url": "^1.0.1",
 		"next": "^12.0.7",
