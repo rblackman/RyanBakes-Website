@@ -1,19 +1,34 @@
-import { ImageWithAlt } from '@ryan-blackman/ryan-bakes-cms';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import { ImageUrlBuilder, useNextSanityImage, UseNextSanityImageBuilderOptions } from 'next-sanity-image';
 import type { ImageProps } from 'next/image';
 import Image from 'next/image';
 import { useCallback, useMemo } from 'react';
 import { basicClient } from '../../sanity/sanityClient';
 
-interface Props extends Omit<ImageProps, 'src' | 'width' | 'height' | 'alt' | 'layout'> {
-	src: ImageWithAlt;
+interface BaseProps extends Omit<ImageProps, 'src' | 'width' | 'height' | 'alt' | 'layout'> {
+	src: SanityImageSource;
+	alt: string | undefined;
+	emptyAlt: boolean;
 	width: number;
-	height: number;
 	layout: 'fill' | 'fixed' | 'intrinsic' | 'responsive';
 }
 
-export default function SanityImage({ src, width, height, ...rest }: Props) {
-	const { alt: altText, emptyAlt } = src;
+interface FixedProps extends BaseProps {
+	height: number;
+}
+
+interface AspectProps extends BaseProps {
+	aspectRatio: string;
+}
+
+type Props = FixedProps | AspectProps;
+
+function isAspectProps(props: Props): props is AspectProps {
+	return typeof (props as AspectProps)?.aspectRatio === 'string';
+}
+
+export default function SanityImage(props: Props) {
+	const { src, alt: altText, emptyAlt, width, ...rest } = props;
 
 	const alt = useMemo(() => {
 		if (emptyAlt) {
@@ -22,27 +37,35 @@ export default function SanityImage({ src, width, height, ...rest }: Props) {
 		return altText;
 	}, [altText, emptyAlt]);
 
-	const aspectRatio = useMemo(() => width / height, [width, height]);
+	const calculatedAspectRatio = useMemo(() => {
+		if (isAspectProps(props)) {
+			const { aspectRatio } = props;
+			const [w, h] = aspectRatio.trim().split('/');
+			return parseInt(w, 10) / parseInt(h, 10);
+		}
+		const { height } = props;
+		return width / height;
+	}, [props, width]);
 
 	const imageBuilder: (imageUrlBuilder: ImageUrlBuilder, options: UseNextSanityImageBuilderOptions) => ImageUrlBuilder = useCallback(
 		(imageUrlBuilder, { width: rWidth }) => {
 			const w = rWidth ?? width;
-			const h = Math.round(w / aspectRatio);
+			const h = Math.round(w / calculatedAspectRatio);
 
 			return imageUrlBuilder.width(w).height(h).format('webp');
 		},
-		[aspectRatio, width]
+		[calculatedAspectRatio, width]
 	);
 
 	const imageProps = useNextSanityImage(basicClient, src, {
 		imageBuilder
 	});
 
-	const props = {
+	const combinedProps = {
 		...rest,
 		...imageProps
 	};
 
 	// eslint-disable-next-line react/jsx-props-no-spreading
-	return <Image alt={alt} {...props} />;
+	return <Image alt={alt} {...combinedProps} />;
 }

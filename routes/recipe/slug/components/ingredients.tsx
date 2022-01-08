@@ -1,16 +1,11 @@
 import { Ingredient as IngredientType } from '@ryan-blackman/ryan-bakes-cms';
 import { SanityKeyed } from 'sanity-codegen';
 import styled from 'styled-components';
+import Heading from '../../../../components/generic/heading';
 import baseSpacing from '../../../../helpers/styled-components/baseSpacing';
-import sr from '../../../../helpers/styled-components/sr';
+import bgAlt from '../../../../helpers/styled-components/bgAlt';
 import Theme from '../../../../types/theme';
 import Ingredient from './ingredient';
-
-const IngredientsWrap = styled.div``;
-
-const IngredientsHeading = styled.h2`
-	${sr()}
-`;
 
 const IngredientsTableWrap = styled.div`
 	overflow-x: auto;
@@ -32,7 +27,7 @@ const THead = styled.thead`
 
 const TBody = styled.tbody`
 	tr:nth-of-type(even) td {
-		background: ${({ theme }: { theme: Theme }) => theme.colors.secondary.color}10;
+		${bgAlt}
 	}
 
 	td {
@@ -46,8 +41,8 @@ interface Props {
 
 export default function Ingredients({ ingredients }: Props) {
 	return (
-		<IngredientsWrap>
-			<IngredientsHeading>Ingredients</IngredientsHeading>
+		<>
+			<Heading level={2}>Ingredients</Heading>
 			<IngredientsTableWrap>
 				<Table>
 					<THead>
@@ -63,6 +58,6 @@ export default function Ingredients({ ingredients }: Props) {
 					</TBody>
 				</Table>
 			</IngredientsTableWrap>
-		</IngredientsWrap>
+		</>
 	);
 }

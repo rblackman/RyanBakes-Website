@@ -1,7 +1,7 @@
 import { Ingredient as IngredientType } from '@ryan-blackman/ryan-bakes-cms';
 import { SanityKeyed } from 'sanity-codegen';
 import styled from 'styled-components';
-import Unit from './unit';
+import IngredientAmount from './ingredientAmount';
 
 const Note = styled.span`
 	font-style: italic;
@@ -14,8 +14,7 @@ export default function Ingredient({ ingredient: { name, amount, unit, notes } }
 		<tr>
 			<td>{name}</td>
 			<td>
-				{amount}
-				<Unit unit={unit} />
+				<IngredientAmount unit={unit} amount={amount} />
 				{notes && notes.length > 0 && (
 					<>
 						{' '}

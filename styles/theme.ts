@@ -40,6 +40,12 @@ const Theme: ThemeType = {
 			maxWidth: 2000,
 			heroAspectRatio: { w: 7, h: 2 }
 		}
+	},
+	sizes: {
+		maxContentWidth: 1900,
+		largeImage: 880,
+		mediumImage: 450,
+		smallImage: 300
 	}
 };
 

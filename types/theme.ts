@@ -32,9 +32,17 @@ export interface BreakPoints {
 	largeDesktop: BreakPoint;
 }
 
+export interface Sizes {
+	maxContentWidth: number;
+	largeImage: number;
+	mediumImage: number;
+	smallImage: number;
+}
+
 export default interface Theme {
 	baseSpacing: number;
 	colors: Colors;
 	typography: Typography;
 	breakpoints: BreakPoints;
+	sizes: Sizes;
 }

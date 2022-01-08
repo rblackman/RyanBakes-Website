@@ -25,8 +25,8 @@ body {
 	line-height: 1.2;
 }
 
-:is(h2, h3):not(:first-child) {
-	margin-top: ${baseSpacing()};
+:is(h1, h2, h3):not(:first-child) {
+	margin-top: ${baseSpacing(3)};
 }
 
 article * + * {
@@ -34,16 +34,16 @@ article * + * {
 }
 
 header, .content, footer {
-	max-width: clamp(0px, 90vw, ${baseSpacing(50)});
+	max-width: clamp(0px, 90vw, ${({ theme }) => theme.sizes.maxContentWidth}px);
 	margin: 0 auto;
 }
 
 .content {
-	padding: clamp(5vh, ${baseSpacing(6)}, 50vh) clamp(${baseSpacing()}, 5vw, ${baseSpacing(3)}) ${baseSpacing()};
+	padding: clamp(5vh, ${baseSpacing(6)}, 50vh) clamp(${baseSpacing()}, 5vw, ${baseSpacing(3)}) ${baseSpacing(6)};
 	min-height: 100vh;
 
 	@media only screen and (max-width: 660px){
-		padding: clamp(2vh, ${baseSpacing(3)}, 50vh) clamp(${baseSpacing(0.5)}, 1vw, ${baseSpacing(3)}) ${baseSpacing()};
+		padding: clamp(2vh, ${baseSpacing(3)}, 50vh) clamp(${baseSpacing(0.5)}, 1vw, ${baseSpacing(3)}) ${baseSpacing(3)};
 	}
 }
 
