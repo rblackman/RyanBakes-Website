@@ -25,8 +25,7 @@ export default function IngredientAmount({ amount, unit: { _ref: unitRef }, full
 
 	return (
 		<>
-			{displayAmount}
-			{unitDisplay}
+			{displayAmount} {unitDisplay}
 		</>
 	);
 }

@@ -1,10 +1,8 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { getDataHooksProps } from 'next-data-hooks';
-import isProduction from '../helpers/isProduction';
 import HomePage from '../routes/index/components/homepage';
 
-const amp = isProduction();
-export const config = { amp };
+export const config = { amp: true };
 
 export default function Home() {
 	return <HomePage />;
