@@ -3,7 +3,7 @@ import { getDataHooksProps } from 'next-data-hooks';
 import Recipe from '../../routes/recipe/slug/components/recipe';
 import sanityClient from '../../sanity/sanityClient';
 
-export const config = { amp: true };
+export const config = { amp: false };
 
 export default function Slug() {
 	return <Recipe />;

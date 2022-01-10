@@ -39,11 +39,11 @@ header, .content, footer {
 }
 
 .content {
-	padding: clamp(5vh, ${baseSpacing(6)}, 50vh) clamp(${baseSpacing()}, 5vw, ${baseSpacing(3)}) ${baseSpacing(6)};
+	padding: clamp(${baseSpacing(2)}, ${baseSpacing(2)}, 50vh) clamp(${baseSpacing()}, 5vw, ${baseSpacing(3)}) ${baseSpacing(6)};
 	min-height: 100vh;
 
 	@media only screen and (max-width: 660px){
-		padding: clamp(2vh, ${baseSpacing(3)}, 50vh) clamp(${baseSpacing(0.5)}, 1vw, ${baseSpacing(3)}) ${baseSpacing(3)};
+		padding: clamp(2vh, ${baseSpacing(2)}, 50vh) clamp(${baseSpacing(0.5)}, 1vw, ${baseSpacing(3)}) ${baseSpacing(3)};
 	}
 }
 
