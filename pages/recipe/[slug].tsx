@@ -3,6 +3,8 @@ import { getDataHooksProps } from 'next-data-hooks';
 import Recipe from '../../routes/recipe/slug/components/recipe';
 import sanityClient from '../../sanity/sanityClient';
 
+export const config = { amp: false };
+
 export default function Slug() {
 	return <Recipe />;
 }
@@ -35,7 +37,6 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context: GetSt
 	return {
 		props: {
 			...dataHooksProps
-		},
-		revalidate: 60 * 60 * 12 // 12 hours
+		}
 	};
 };

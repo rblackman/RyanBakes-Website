@@ -2,6 +2,8 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { getDataHooksProps } from 'next-data-hooks';
 import HomePage from '../routes/index/components/homepage';
 
+export const config = { amp: true };
+
 export default function Home() {
 	return <HomePage />;
 }
@@ -15,7 +17,6 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
 	return {
 		props: {
 			...dataHooksProps
-		},
-		revalidate: 60 * 60 * 12 // 12 hours
+		}
 	};
 };

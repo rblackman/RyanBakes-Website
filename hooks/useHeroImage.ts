@@ -68,6 +68,7 @@ export default function useHeroImage(src: SanityImageSource) {
 				.dpr(pixelRatio)
 				.width(imageWidth)
 				.height(Math.ceil(imageWidth / aspectRatio))
+				.format('webp')
 				.toString() ?? '';
 		return `url(${url})`;
 	}, [aspectRatio, imageWidth, pixelRatio, src]);

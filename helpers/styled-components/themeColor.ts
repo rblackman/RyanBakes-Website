@@ -10,3 +10,10 @@ export default function themeColor(getColor: (theme: Theme) => ThemePalette, alp
 		`;
 	};
 }
+
+export function themeValue(getColor: (theme: Theme) => ThemePalette, alpha?: string | undefined) {
+	return function createRule({ theme }: { theme: Theme }) {
+		const color = getColor(theme);
+		return `${color.color}${alpha ?? ''}`;
+	};
+}

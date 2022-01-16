@@ -19,7 +19,7 @@ export default function Steps({ ingredients, steps }: Props) {
 
 	return (
 		<>
-			<Heading level={2}>Steps</Heading>
+			<Heading level={2}>Instructions</Heading>
 			<div role="list">
 				{steps.map((step, i) => (
 					<Step key={step._key} step={step} ingredients={getIngredientsForIndex(i)} />

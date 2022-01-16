@@ -1,5 +1,5 @@
 import Heading from '../../../components/generic/heading';
-import ApplicationPage from '../../../components/shared/applicatonPage';
+import ApplicationPage from '../../../components/shared/applicationPage';
 import RecentRecipes from './recentRecipes';
 
 function HomePage() {

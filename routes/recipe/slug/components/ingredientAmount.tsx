@@ -19,14 +19,17 @@ function UnitDisplay({ unit: { name, abbreviation, exempt }, full }: { unit: Uni
 export default function IngredientAmount({ amount, unit: { _ref: unitRef }, full }: Props) {
 	const units = useUnits();
 	const unit = units.filter(({ _id }) => _id === unitRef)[0];
-	const { display } = unit;
+	const { display, exempt } = unit;
 	const unitDisplay = <UnitDisplay unit={unit} full={full || false} />;
 	const displayAmount = display === 'Fraction' ? <Fraction val={amount} /> : <span>{amount}</span>;
 
+	if (exempt) {
+		return null;
+	}
+
 	return (
 		<>
-			{displayAmount}
-			{unitDisplay}
+			{displayAmount} {unitDisplay}
 		</>
 	);
 }
