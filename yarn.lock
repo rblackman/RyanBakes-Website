@@ -1181,10 +1181,10 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
-"@ryan-blackman/ryan-bakes-cms@^1.0.13":
-  version "1.0.13"
-  resolved "https://pkgs.dev.azure.com/rblackman24/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@ryan-blackman/ryan-bakes-cms/-/ryan-bakes-cms-1.0.13.tgz#4797c9620d8b92652143004bb611a19205e75fa0"
-  integrity sha1-R5fJYg2LkmUhQwBLthGhkgXnX6A=
+"@ryan-blackman/ryan-bakes-cms@^1.0.14":
+  version "1.0.14"
+  resolved "https://pkgs.dev.azure.com/rblackman24/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@ryan-blackman/ryan-bakes-cms/-/ryan-bakes-cms-1.0.14.tgz#06677b90211bc8d9ff97c564dad7d144e22b3b41"
+  integrity sha1-Bmd7kCEbyNn/l8Vk2tfRROIrO0E=
   dependencies:
     sanity-codegen "^0.9.8"
 
