@@ -1,5 +1,6 @@
 import { createPortableTextComponent } from 'next-sanity';
 import { ReactNode } from 'react';
+import Fraction from '../components/generic/fraction';
 import config from './sanityConfig';
 
 interface ExternalLinkProps {
@@ -14,6 +15,14 @@ interface ExternalLinkProps {
 	children: ReactNode;
 }
 
+interface FractionProps {
+	_type: 'span';
+	_key: string;
+	children: string[];
+	mark: 'fraction';
+	markKey: 'fraction';
+}
+
 const PortableText = createPortableTextComponent({
 	...config,
 	// Serializers passed to @sanity/block-content-to-react
@@ -22,6 +31,9 @@ const PortableText = createPortableTextComponent({
 		marks: {
 			externalLink: ({ children, mark: { href } }: ExternalLinkProps) => {
 				return <a href={href}>{children}</a>;
+			},
+			fraction: ({ children }: FractionProps) => {
+				return <Fraction val={children[0]} />;
 			}
 		}
 	}

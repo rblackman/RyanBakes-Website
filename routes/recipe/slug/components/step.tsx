@@ -5,6 +5,7 @@ import Block from '../../../../components/generic/blockContent/block';
 import Heading from '../../../../components/generic/heading';
 import baseSpacing from '../../../../helpers/styled-components/baseSpacing';
 import bgAlt from '../../../../helpers/styled-components/bgAlt';
+import { themeValue } from '../../../../helpers/styled-components/themeColor';
 import IngredientAmount from './ingredientAmount';
 
 interface Props {
@@ -20,6 +21,19 @@ const StepWrap = styled.div`
 	grid-template-areas: 'ing step';
 	grid-gap: ${baseSpacing(2)};
 	align-items: center;
+
+	@media (max-width: 910px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		grid-gap: 1rem;
+		grid-template-areas: 'step' 'ing';
+
+		ul {
+			padding-left: ${baseSpacing(0.5)};
+			margin-left: ${baseSpacing(0.5)};
+			border-left: 0.1rem solid ${themeValue((t) => t.colors.secondary)};
+		}
+	}
 
 	&:nth-of-type(even) {
 		${bgAlt};
