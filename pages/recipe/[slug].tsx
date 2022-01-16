@@ -37,7 +37,6 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context: GetSt
 	return {
 		props: {
 			...dataHooksProps
-		},
-		revalidate: 60 * 60 * 12 // 12 hours
+		}
 	};
 };

@@ -1,4 +1,4 @@
-import ApplicationPage from '../../../../components/shared/applicatonPage';
+import ApplicationPage from '../../../../components/shared/applicationPage';
 import useRecipe from '../hooks/useRecipe';
 import useUnits from '../hooks/useUnits';
 import Commentary from './commentary';
