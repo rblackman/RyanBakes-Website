@@ -1,0 +1,10 @@
+.tagList {
+	padding-left: 0;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 0 clamp(5vh, 3rem, 50vh);
+}
+
+.tagList li+li {
+	margin-left: 1rem;
+}

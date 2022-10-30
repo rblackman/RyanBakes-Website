@@ -1,0 +1,29 @@
+.subHeading {
+	margin: 0;
+}
+
+.dl {
+	margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.dl dt {
+	margin: 0;
+	font-weight: bold;
+}
+
+.dl dt::after {
+	content: ':';
+	font-weight: normal;
+	margin-right: 0.25rem;
+}
+
+.dl dd {
+	margin: 0;
+
+}
+
+.dl dd+dt {
+	margin-left: 1rem;
+}
