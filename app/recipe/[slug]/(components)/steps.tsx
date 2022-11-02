@@ -1,11 +1,11 @@
 import Heading from 'app/(components)/heading';
-import getRecipeById from 'queries/getRecipeById';
+import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use, useCallback } from 'react';
 import { Props } from '../page';
 import Step from './step';
 
-export default function Steps({ params: { slug: id } }: Props) {
-	const { ingredients, steps } = use(getRecipeById(id));
+export default function Steps({ params: { slug } }: Props) {
+	const { ingredients, steps } = use(getRecipeBySlug(slug));
 
 	if (!(ingredients && steps)) {
 		return null;

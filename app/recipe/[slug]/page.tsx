@@ -1,4 +1,5 @@
-import getAllRecipeIds from 'queries/getAllRecipeIds';
+import getAllRecipeSlugs from 'queries/getAllRecipeSlugs';
+import 'server-only';
 import Commentary from './(components)/commentary';
 import Ingredients from './(components)/ingredients';
 import Steps from './(components)/steps';
@@ -22,6 +23,6 @@ export default function Page(props: Props) {
 }
 
 export async function generateStaticParams() {
-	const ids = await getAllRecipeIds();
+	const ids = await getAllRecipeSlugs();
 	return ids.map((slug) => ({ slug }));
 }

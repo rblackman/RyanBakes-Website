@@ -1,11 +1,11 @@
-import getRecipeById from 'queries/getRecipeById';
+import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use, useMemo } from 'react';
 import styles from '../(styles)/tags.module.css';
 import { Props } from '../page';
 import Tag from './tag';
 
-export default function Tags({ params: { slug: id } }: Props) {
-	const { tags } = use(getRecipeById(id));
+export default function Tags({ params: { slug } }: Props) {
+	const { tags } = use(getRecipeBySlug(slug));
 	const sorted = useMemo(() => tags.sort(), [tags]);
 
 	return (

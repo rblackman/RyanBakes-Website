@@ -3,12 +3,19 @@
 import type { PortableTextComponents, PortableTextMarkComponentProps, PortableTextProps } from '@portabletext/react';
 import { PortableText as PortableTextComponent } from '@portabletext/react';
 import type { PortableTextBlock, TypedObject } from '@portabletext/types';
+import Fraction from 'app/recipe/[slug]/(components)/fraction';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import Heading from './heading';
 
 interface ExternalLinkProps {
 	_type: string;
 	href: string;
+}
+
+function UnknownMark({ children, markType }: { children: ReactNode; markType: string }) {
+	console.warn('Unknown Mark', { children, markType });
+	return <span className="UNKNOWN_MARK">{children}</span>;
 }
 
 const portableTextComponents: PortableTextComponents = {
@@ -19,7 +26,7 @@ const portableTextComponents: PortableTextComponents = {
 		normal: ({ children }) => <p>{children}</p>
 	},
 	marks: {
-		externalLink: ({ children, value }: PortableTextMarkComponentProps<ExternalLinkProps>) => {
+		externalLink: ({ children, value, markType }: PortableTextMarkComponentProps<ExternalLinkProps>) => {
 			if (value) {
 				const { href } = value;
 				if (href.startsWith('/')) {
@@ -27,7 +34,15 @@ const portableTextComponents: PortableTextComponents = {
 				}
 				return <a href={href}>{children}</a>;
 			}
-			return <span>{children}</span>;
+			return <UnknownMark markType={markType}>{children}</UnknownMark>;
+		},
+		fraction: ({ children, markType }) => {
+			const childArray = children as string[];
+			if (childArray && childArray.length >= 1) {
+				const val = childArray[0];
+				return <Fraction val={val} />;
+			}
+			return <UnknownMark markType={markType}>{children}</UnknownMark>;
 		}
 	}
 };

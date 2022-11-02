@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import getAllTags from 'queries/getAllTags';
 import { use } from 'react';
 import getRecipesByRecent from '../queries/getRecipesByRecent';
 
@@ -7,11 +8,17 @@ export default function Page() {
 
 	return (
 		<ul>
-			{recipes.map(({ _id: id, title }) => (
-				<li key={id}>
-					<Link href={`/recipe/${id}`}>{title}</Link>
+			{recipes.map(({ slug: { current: slug }, title }) => (
+				<li key={slug}>
+					<Link href={`/recipe/${slug}`}>{title}</Link>
 				</li>
 			))}
 		</ul>
 	);
+}
+
+export async function generateStaticParams() {
+	const tags = await getAllTags();
+	console.log('tags', tags);
+	return tags;
 }

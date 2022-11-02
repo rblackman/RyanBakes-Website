@@ -1,12 +1,12 @@
 import Heading from 'app/(components)/heading';
-import getRecipeById from 'queries/getRecipeById';
+import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use } from 'react';
 import styles from '../(styles)/ingredients.module.css';
 import { Props } from '../page';
 import Ingredient from './ingredient';
 
-export default function Ingredients({ params: { slug: id } }: Props) {
-	const { ingredients } = use(getRecipeById(id));
+export default function Ingredients({ params: { slug } }: Props) {
+	const { ingredients } = use(getRecipeBySlug(slug));
 
 	if (!ingredients) {
 		return null;

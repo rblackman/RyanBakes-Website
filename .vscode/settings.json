@@ -36,6 +36,7 @@
     "editor.defaultFormatter": "vscode.css-language-features"
   },
   "cSpell.words": [
-    "clsx"
+    "clsx",
+    "Groq"
   ]
 }

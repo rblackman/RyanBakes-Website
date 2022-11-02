@@ -3,12 +3,12 @@ import 'server-only';
 import Query from 'types/query';
 import buildGroqQuery from './buildGroqQuery';
 
-export default async function getRecipeById(id: string): Promise<Recipe> {
-	if (!id || id.length === 0) {
-		throw new Error('Must provide an id');
+export default async function getRecipeBySlug(slug: string): Promise<Recipe> {
+	if (!slug || slug.length === 0) {
+		throw new Error('Must provide an slug');
 	}
 
-	const url = buildGroqQuery(`*[ _type == 'recipe' && _id == '${id}' ]`);
+	const url = buildGroqQuery(`*[ _type == 'recipe' && slug.current == '${slug}' ]`);
 
 	const response = await fetch(url);
 	const { status, statusText } = response;
@@ -20,11 +20,11 @@ export default async function getRecipeById(id: string): Promise<Recipe> {
 	const { result } = (await response.json()) as Query<Recipe>;
 
 	if (result.length === 0) {
-		throw new Error(`Could not find recipe with ID: ${id}`);
+		throw new Error(`Could not find recipe with slug: ${slug}`);
 	}
 
 	if (result.length > 1) {
-		console.warn(`Got more than one recipe with id ${id}. Using the first.`, { id, result });
+		console.warn(`Got more than one recipe with slug ${slug}. Using the first.`, { slug, result });
 	}
 
 	return result[0];
