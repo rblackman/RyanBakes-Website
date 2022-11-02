@@ -1,4 +1,5 @@
 import { Ingredient as IngredientType, Step as SanityStep } from '@ryan-blackman/ryan-bakes-cms';
+import Block from 'app/(components)/block';
 import Heading from 'app/(components)/heading';
 import { SanityKeyed } from 'sanity-codegen';
 import styles from '../(styles)/step.module.css';
@@ -24,9 +25,10 @@ export default function Step({ ingredients, step: { title, content } }: Props) {
 				<Heading level={3} style={{ margin: 0 }}>
 					{title}
 				</Heading>
-				{/* {content.map(({ _key, ...block }) => {
-					// return <Block key={_key} block={block} />;
-				})} */}
+				{content.map((block) => {
+					const { _key: key } = block;
+					return <Block key={key} content={block} />;
+				})}
 			</div>
 		</div>
 	);

@@ -22,6 +22,7 @@
 		"editorconfig": true
 	},
 	"dependencies": {
+		"@portabletext/react": "^1.0.6",
 		"@ryan-blackman/ryan-bakes-cms": "^1.0.15",
 		"@sanity/image-url": "^1.0.1",
 		"clsx": "1.2.1",
