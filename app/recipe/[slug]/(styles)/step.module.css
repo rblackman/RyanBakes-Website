@@ -13,7 +13,7 @@
 	background: var(--bg-alt);
 }
 
-@media (max-width: 910px) {
+@media only screen and (max-width: 910px) {
 	.stepWrap {
 
 		grid-template-columns: 1fr;

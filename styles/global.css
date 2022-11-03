@@ -102,21 +102,21 @@ a {
 	aspect-ratio: var(--hero-aspectRatio_W) / var(--hero-aspectRatio_H);
 }
 
-@media(max-width: var(--bp_desktop)) {
+@media only screen and (max-width: 1921px) {
 	:root {
 		--hero-aspectRatio_W: 8;
 		--hero-aspectRatio_H: 3;
 	}
 }
 
-@media(max-width: var(--bp_tablet)) {
+@media only screen and (max-width: 1000px) {
 	:root {
 		--hero-aspectRatio_W: 1;
 		--hero-aspectRatio_H: 1;
 	}
 }
 
-@media(max-width: var(--bp_mobile)) {
+@media only screen and (max-width: 768px) {
 	:root {
 		--hero-aspectRatio_W: 3;
 		--hero-aspectRatio_H: 4;

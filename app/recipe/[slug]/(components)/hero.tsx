@@ -5,7 +5,9 @@ import { Props } from '../page';
 import SubTitle from './subTitle';
 
 export default function Hero({ params: { slug } }: Props) {
-	const { title } = use(getRecipeBySlug(slug));
+	const { title, picture } = use(getRecipeBySlug(slug));
+
+	// const image = useImage(picture, {});
 
 	return (
 		<div className={styles.heroContainer}>

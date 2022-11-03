@@ -14,12 +14,11 @@
 
 .headingWrap {
 	background: rgba(var(--primary_r), var(--primary_g), var(--primary_b), 0.85);
+	color: var(--primary-contrast);
 	padding: 1rem 4rem;
 	max-width: 90vw;
 	backdrop-filter: blur(5px);
 	margin: 0 0 1rem;
-
-
 }
 
 .heading {
@@ -27,7 +26,7 @@
 }
 
 
-@media (min-width: var(--bp_tablet_plus1)) {
+@media only screen and (min-width: 1001px) {
 	.headingWrap {
 		padding: 1rem 6rem;
 	}
