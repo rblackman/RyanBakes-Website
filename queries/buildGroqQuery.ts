@@ -1,5 +1,5 @@
-const siteKey = process.env.SANITY_KEY;
-const dataset = process.env.SANITY_DATASET;
+const siteKey = process.env.NEXT_PUBLIC_SANITY_KEY;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
 
 const baseAddress = `https://${siteKey}.api.sanity.io/v1/data/query/${dataset}`;
 
