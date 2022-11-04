@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import getSiteConfig from 'queries/getSiteConfig';
 import { ReactNode, use } from 'react';
 
@@ -10,16 +9,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
 	return (
 		<html lang={lang}>
-			<body>
-				<header>
-					<h1>
-						<Link href="/">{title}</Link>
-					</h1>
-				</header>
-				<div className="content">
-					<main>{children}</main>
-				</div>
-			</body>
+			<body>{children}</body>
 		</html>
 	);
 }

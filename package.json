@@ -1,7 +1,8 @@
 {
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo",
+		"dev": "next dev",
+		"turbo": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
@@ -22,25 +23,24 @@
 		"editorconfig": true
 	},
 	"dependencies": {
-		"@portabletext/react": "^1.0.6",
+		"@portabletext/react": "^2.0.0",
 		"@ryan-blackman/ryan-bakes-cms": "^1.0.15",
-		"@sanity/image-url": "^1.0.1",
 		"clsx": "1.2.1",
-		"next": "latest",
-		"next-sanity": "^1.0.3",
-		"next-sanity-image": "^4.1.0",
+		"next": "^13.0.1",
+		"next-sanity": "^1.0.5",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-icons": "^4.6.0",
 		"server-only": "^0.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "18.0.3",
-		"@types/react": "18.0.15",
-		"@types/react-dom": "18.0.6",
-		"eslint": "8.19.0",
-		"eslint-config-next": "latest",
+		"@portabletext/types": "^2.0.0",
+		"@types/node": "^18.11.9",
+		"@types/react": "^18.0.24",
+		"@types/react-dom": "^18.0.8",
+		"eslint": "^8.26.0",
+		"eslint-config-next": "^13.0.1",
 		"prettier": "^2.7.1",
-		"typescript": "4.7.4"
+		"typescript": "^4.8.4"
 	}
 }

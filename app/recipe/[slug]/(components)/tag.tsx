@@ -9,7 +9,7 @@ interface Props {
 
 export default function Tag({ tag }: Props) {
 	return (
-		<li className={styles.tagListItem}>
+		<li key={tag} className={styles.tagListItem}>
 			<Link className={styles.tagLink} href={`/tags/${tag.replace(' ', '-')}`}>
 				<BiPurchaseTagAlt className={styles.tagLink_Svg} />
 				<span className={styles.tagLink_Tag}> {tag}</span>

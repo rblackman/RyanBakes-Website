@@ -1,11 +1,10 @@
-'use client';
-
 import type { PortableTextComponents, PortableTextMarkComponentProps, PortableTextProps } from '@portabletext/react';
 import { PortableText as PortableTextComponent } from '@portabletext/react';
 import type { PortableTextBlock, TypedObject } from '@portabletext/types';
 import Fraction from 'app/recipe/[slug]/(components)/fraction';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import 'server-only';
 import Heading from './heading';
 
 interface ExternalLinkProps {

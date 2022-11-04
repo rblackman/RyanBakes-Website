@@ -19,6 +19,5 @@ export default function Page() {
 
 export async function generateStaticParams() {
 	const tags = await getAllTags();
-	console.log('tags', tags);
 	return tags;
 }
