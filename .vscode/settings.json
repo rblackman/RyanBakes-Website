@@ -1,49 +1,42 @@
 {
-	"cSpell.words": [
-		"gtag",
-		"ldmw",
-		"serializers",
-		"webp"
-	],
-	"files.trimTrailingWhitespace": true,
-	"files.trimFinalNewlines": true,
-	"files.insertFinalNewline": true,
-	"files.exclude": {
-		"**/.git": true,
-		"**/.DS_Store": true,
-		"**/bin": true,
-		"**/obj": true,
-		"**/node_modules": true,
-		"**/.next": true
-	},
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[javascriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[graphql]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"markdownlint.config": {
-		"MD028": false,
-		"MD025": {
-			"front_matter_title": ""
-		}
-	},
-	"files.associations": {
-		"*.env.development": "env",
-		"*.env.production": "env"
-	}
+  "typescript.tsdk": ".\\node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/bin": true,
+    "**/obj": true,
+    "**/node_modules": true,
+    "**/.next": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "cSpell.words": [
+    "clsx",
+    "Groq"
+  ]
 }

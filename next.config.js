@@ -1,20 +1,13 @@
-const withPWA = require('next-pwa');
-const runtimeCaching = require('./cache.js');
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	reactStrictMode: true,
+	swcMinify: true,
+	experimental: {
+		appDir: true
+	},
+	images: {
+		domains: ['cdn.sanity.io']
+	}
+};
 
-module.exports = withPWA({
-  webpack5: true,
-  future: {
-    strictPostcssConfiguration: true
-  },
-  pwa: {
-    disable: process.env.NODE_ENV === 'development' && process.env.NEXT_PUBLIC_ENABLE_SW !== 'true',
-    dest: 'public',
-    register: true,
-    scope: '/',
-    maximumFileSizeToCacheInBytes: 15000000,
-    cleanupOutdatedCaches: true,
-    buildExcludes: [/chunks\/images\/.*$/],
-    dynamicStartUrl: true,
-    runtimeCaching
-  }
-});
+module.exports = nextConfig;

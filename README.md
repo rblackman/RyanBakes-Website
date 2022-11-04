@@ -1,11 +1,21 @@
-# Vercel Deployment
+# Ryan Bakes
 
-If deploying with Vercel, you will need to authenticate with the private NPM registry.
+## NPM
 
-Do so by setting an environmental variable in Vercel:
+This project uses a custom NPM repo with Azure Dev Ops. Follow these steps to authenticate:
 
-1. Authenticate with [Azure Dev Ops][ado] on local machine.
-2. Copy the contents of `C:\Users\{USER_NAME}\.npmrc`
-3. Set variable in Vercel with the name `NPM_RC` and the value from step 2.
+If you don't already have it installed. Run the following to install the vsts npm auth tool:
 
-[ado]: https://docs.microsoft.com/en-us/azure/devops/artifacts/npm/npmrc?view=azure-devops&tabs=windows
+```powershell
+npm install -g vsts-npm-auth
+```
+
+```powershell
+vsts-npm-auth -config .npmrc -force -E 525600
+```
+
+To get a new token for a NPM_RC env variable (used for deployment pipelines) run:
+
+```powershell
+vsts-npm-auth -C .\.npmrc -T temp.npmrc -E 525600 -F
+```

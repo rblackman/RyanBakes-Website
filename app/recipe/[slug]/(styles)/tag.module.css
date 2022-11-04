@@ -1,0 +1,27 @@
+.tagListItem {
+	list-style: none;
+}
+
+.tagLink {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	color: var(--text);
+	text-decoration-color: transparent;
+}
+
+.tagLink:hover,
+.tagLink:focus-visible {
+	text-decoration-color: var(--secondary);
+}
+
+.tagLink_Svg {
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-right: 0.125rem;
+	fill: var(--secondary);
+}
+
+.tagLink_Tag {
+	font-size: 0.75rem;
+}

@@ -1,0 +1,14 @@
+.numerator,
+.denominator,
+.divide {
+	font-feature-settings: frac;
+	font-variant-numeric: diagonal-fractions;
+}
+
+.numerator {
+	font-variant-position: super;
+}
+
+.denominator {
+	font-variant-position: sub;
+}
