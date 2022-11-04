@@ -1,6 +1,7 @@
 import Heading from 'app/(components)/heading';
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use, useCallback } from 'react';
+import 'server-only';
 import { Props } from '../page';
 import Step from './step';
 

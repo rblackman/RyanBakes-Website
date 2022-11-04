@@ -1,5 +1,6 @@
 import assertUnreachable from 'helpers/assertUnreachable';
 import { createElement, CSSProperties, ReactNode, useMemo } from 'react';
+import 'server-only';
 
 interface Props {
 	level: 1 | 2 | 3;

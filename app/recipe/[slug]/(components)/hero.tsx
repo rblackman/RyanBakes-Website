@@ -1,6 +1,7 @@
 import useImageBuilder from 'hooks/useImageBuilder';
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { CSSProperties, use, useMemo } from 'react';
+import 'server-only';
 import styles from '../(styles)/hero.module.css';
 import { Props } from '../page';
 import SubTitle from './subTitle';

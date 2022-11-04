@@ -1,5 +1,6 @@
 import type { InlineImage, SanityKeyed, TextSection } from '@ryan-blackman/ryan-bakes-cms';
 import assertUnreachable from 'helpers/assertUnreachable';
+import 'server-only';
 import TextSectionComponent from './(blockTypes)/textSection';
 
 interface Props {

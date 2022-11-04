@@ -1,6 +1,6 @@
 import getSiteConfig from 'queries/getSiteConfig';
 import { ReactNode, use } from 'react';
-
+import 'server-only';
 import '../styles/global.css';
 import '../styles/variables.css';
 

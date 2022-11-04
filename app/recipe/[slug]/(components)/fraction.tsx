@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import 'server-only';
 import styles from '../(styles)/fraction.module.css';
 
 function FractionPart({ val }: { val: string }) {

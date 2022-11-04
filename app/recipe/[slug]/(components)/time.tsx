@@ -1,3 +1,4 @@
+import 'server-only';
 import useTime from '../../../../hooks/useTime';
 
 interface Props {

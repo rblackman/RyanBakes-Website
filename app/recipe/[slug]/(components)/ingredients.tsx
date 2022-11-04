@@ -1,6 +1,7 @@
 import Heading from 'app/(components)/heading';
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use } from 'react';
+import 'server-only';
 import styles from '../(styles)/ingredients.module.css';
 import { Props } from '../page';
 import Ingredient from './ingredient';

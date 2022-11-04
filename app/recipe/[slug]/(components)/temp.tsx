@@ -1,3 +1,5 @@
+import 'server-only';
+
 interface Props {
 	fahrenheit: number;
 }

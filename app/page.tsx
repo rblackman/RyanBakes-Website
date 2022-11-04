@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import getAllTags from 'queries/getAllTags';
 import { use } from 'react';
+import 'server-only';
 import getRecipesByRecent from '../queries/getRecipesByRecent';
 
 export default function Page() {
