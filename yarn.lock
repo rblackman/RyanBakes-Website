@@ -482,10 +482,10 @@
   resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha1-i+NqH2bzJlOJ6QtfnJliFGdY9yg=
 
-"@ryan-blackman/ryan-bakes-cms@^1.0.15":
-  version "1.0.15"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@ryan-blackman/ryan-bakes-cms/-/ryan-bakes-cms-1.0.15.tgz#adf638727f74c3d76c10a91f1372c0cbd17a513d"
-  integrity sha1-rfY4cn90w9dsEKkfE3LAy9F6UT0=
+"@ryan-blackman/ryan-bakes-cms@^1.0.19":
+  version "1.0.19"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@ryan-blackman/ryan-bakes-cms/-/ryan-bakes-cms-1.0.19.tgz#727d0e34b33aeb6a8b2ef9685819a4c3c17fa158"
+  integrity sha1-cn0ONLM662qLLvloWBmkw8F/oVg=
   dependencies:
     sanity-codegen "^0.9.8"
 

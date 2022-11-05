@@ -2,8 +2,8 @@ import Heading from 'app/(components)/heading';
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use } from 'react';
 import 'server-only';
-import styles from '../(styles)/ingredients.module.css';
 import { Props } from '../page';
+import styles from './(styles)/ingredients.module.css';
 import Ingredient from './ingredient';
 
 export default function Ingredients({ params: { slug } }: Props) {

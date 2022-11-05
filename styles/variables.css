@@ -27,4 +27,6 @@
 	--bp_tablet: 1000px;
 	--bp_tablet_plus1: 1001px;
 	--bp_mobile: 768px;
+
+	--animation-duration: 0.2s;
 }

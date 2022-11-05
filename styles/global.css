@@ -50,6 +50,7 @@ article *+* {
 header,
 .content,
 footer {
+	width: 100%;
 	max-width: clamp(0px, 90vw, var(--max-content-width));
 	margin: 0 auto;
 }

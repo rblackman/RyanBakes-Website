@@ -1,10 +1,10 @@
-import type { InlineImage, SanityKeyed, TextSection } from '@ryan-blackman/ryan-bakes-cms';
+import type { InlineImage, RecipePreview, SanityKeyed, TextSection } from '@ryan-blackman/ryan-bakes-cms';
 import assertUnreachable from 'helpers/assertUnreachable';
 import 'server-only';
 import TextSectionComponent from './(blockTypes)/textSection';
 
 interface Props {
-	content: SanityKeyed<InlineImage> | SanityKeyed<TextSection>;
+	content: SanityKeyed<InlineImage> | SanityKeyed<TextSection> | SanityKeyed<RecipePreview>;
 }
 
 export default function Block({ content }: Props) {
@@ -14,6 +14,8 @@ export default function Block({ content }: Props) {
 			return <p>IMG</p>;
 		case 'textSection':
 			return <TextSectionComponent value={content as TextSection} />;
+		case 'recipePreview':
+			return <p>RECIPE PREVIEW</p>;
 		default:
 			assertUnreachable(type);
 	}

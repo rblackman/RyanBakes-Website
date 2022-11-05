@@ -3,10 +3,10 @@ import 'server-only';
 import Query from 'types/query';
 import buildGroqQuery from './buildGroqQuery';
 
-const siteConfigKey = process.env.NEXT_PUBLIC_SITE_CONFIG_KEY;
+const siteConfigKey = process.env.SITE_CONFIG_KEY;
 
 export default async function getSiteConfig(): Promise<SiteConfig> {
-	const url = buildGroqQuery(`*[ _type == '${siteConfigKey}' ]`);
+	const url = buildGroqQuery(`*[ _id == '${siteConfigKey}' ]`);
 	const response = await fetch(url);
 	const { result } = (await response.json()) as Query<SiteConfig>;
 

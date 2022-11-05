@@ -1,24 +1,16 @@
-import Link from 'next/link';
-import getAllTags from 'queries/getAllTags';
+import getHomepage from 'queries/getHomepage';
 import { use } from 'react';
 import 'server-only';
-import getRecipesByRecent from '../queries/getRecipesByRecent';
+import Block from './(components)/block';
 
 export default function Page() {
-	const { result: recipes } = use(getRecipesByRecent());
+	const { title, content } = use(getHomepage());
 
 	return (
-		<ul>
-			{recipes.map(({ slug: { current: slug }, title }) => (
-				<li key={slug}>
-					<Link href={`/recipe/${slug}`}>{title}</Link>
-				</li>
+		<div className="content">
+			{content.map((block) => (
+				<Block key={block._key} content={block} />
 			))}
-		</ul>
+		</div>
 	);
-}
-
-export async function generateStaticParams() {
-	const tags = await getAllTags();
-	return tags;
 }
