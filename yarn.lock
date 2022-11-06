@@ -359,82 +359,82 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@next/env@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/env/-/env-13.0.1.tgz#0361e203c7bfbc7b69679ec48f7b45a8f4cb1c2c"
-  integrity sha1-A2HiA8e/vHtpZ57Ej3tFqPTLHCw=
+"@next/env@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/env/-/env-13.0.2.tgz#5fbd7b4146175ae406edfb4a38b62de8c880c09d"
+  integrity sha1-X717QUYXWuQG7ftKOLYt6MiAwJ0=
 
-"@next/eslint-plugin-next@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.1.tgz#b2fbf9932b125ba61326be50badb3cf1b3292ea2"
-  integrity sha1-svv5kysSW6YTJr5Quts88bMpLqI=
+"@next/eslint-plugin-next@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.2.tgz#89fe2144b37896f926e2bd9bed675396f1f697ce"
+  integrity sha1-if4hRLN4lvkm4r2b7WdTlvH2l84=
   dependencies:
     glob "7.1.7"
 
-"@next/swc-android-arm-eabi@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-13.0.1.tgz#7ce2a7b6576845bc6d7f55504bf9b82a0d9a2792"
-  integrity sha1-fOKntldoRbxtf1VQS/m4Kg2aJ5I=
+"@next/swc-android-arm-eabi@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-13.0.2.tgz#66669b8aab5062f554b8e9905d855679aabf0342"
+  integrity sha1-ZmabiqtQYvVUuOmQXYVWeaq/A0I=
 
-"@next/swc-android-arm64@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-android-arm64/-/swc-android-arm64-13.0.1.tgz#85a13d7667042394939741be218076e4e83a45a2"
-  integrity sha1-haE9dmcEI5STl0G+IYB25Og6RaI=
+"@next/swc-android-arm64@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-android-arm64/-/swc-android-arm64-13.0.2.tgz#c0641d30525e0fb22bf1e2baf6c461d2d9e52f1a"
+  integrity sha1-wGQdMFJeD7Ir8eK69sRh0tnlLxo=
 
-"@next/swc-darwin-arm64@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.0.1.tgz#d615d286127bb096a8950a9d7180fcc5d307614d"
-  integrity sha1-1hXShhJ7sJaolQqdcYD8xdMHYU0=
+"@next/swc-darwin-arm64@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.0.2.tgz#d7e01a33393e83456dbfdc41446bb8a923968ff7"
+  integrity sha1-1+AaMzk+g0Vtv9xBRGu4qSOWj/c=
 
-"@next/swc-darwin-x64@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-darwin-x64/-/swc-darwin-x64-13.0.1.tgz#f410beb8cbe0e82562226309f8ec8924cc6cb410"
-  integrity sha1-9BC+uMvg6CViImMJ+OyJJMxstBA=
+"@next/swc-darwin-x64@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-darwin-x64/-/swc-darwin-x64-13.0.2.tgz#d4a3fbe51edf871a675d89a7afdc78174d1e5841"
+  integrity sha1-1KP75R7fhxpnXYmnr9x4F00eWEE=
 
-"@next/swc-freebsd-x64@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-freebsd-x64/-/swc-freebsd-x64-13.0.1.tgz#16eb9652d3f638305ca16b558408f5bc5eb6edde"
-  integrity sha1-FuuWUtP2ODBcoWtVhAj1vF627d4=
+"@next/swc-freebsd-x64@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-freebsd-x64/-/swc-freebsd-x64-13.0.2.tgz#1b54c3f38d3b36f86663a8dfcc81ea05e01f5172"
+  integrity sha1-G1TD8407NvhmY6jfzIHqBeAfUXI=
 
-"@next/swc-linux-arm-gnueabihf@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-arm-gnueabihf/-/swc-linux-arm-gnueabihf-13.0.1.tgz#0da0700ccf654f813b4c86d057a998598a2fd427"
-  integrity sha1-DaBwDM9lT4E7TIbQV6mYWYov1Cc=
+"@next/swc-linux-arm-gnueabihf@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-arm-gnueabihf/-/swc-linux-arm-gnueabihf-13.0.2.tgz#18495cff32c0b2182cfbf677614219d7072214da"
+  integrity sha1-GElc/zLAshgs+/Z3YUIZ1wciFNo=
 
-"@next/swc-linux-arm64-gnu@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-13.0.1.tgz#f34759cd41086f5b8b582081b2af54f67dc544ae"
-  integrity sha1-80dZzUEIb1uLWCCBsq9U9n3FRK4=
+"@next/swc-linux-arm64-gnu@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-13.0.2.tgz#5fb2563651166c3c6f32bf9e2f9cc6a16a9ef783"
+  integrity sha1-X7JWNlEWbDxvMr+eL5zGoWqe94M=
 
-"@next/swc-linux-arm64-musl@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.0.1.tgz#bcfbf1cdfb9f4d632e7ebd67fd62b768cdd08cb7"
-  integrity sha1-vPvxzfufTWMufr1n/WK3aM3QjLc=
+"@next/swc-linux-arm64-musl@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.0.2.tgz#b9f33c5e17cfe04aa5769b717284cf80865761e6"
+  integrity sha1-ufM8XhfP4EqldptxcoTPgIZXYeY=
 
-"@next/swc-linux-x64-gnu@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.0.1.tgz#ed77528d4a3195d5e57d5d94d12cb2206c2b19ac"
-  integrity sha1-7XdSjUoxldXlfV2U0SyyIGwrGaw=
+"@next/swc-linux-x64-gnu@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.0.2.tgz#29efcc2fd0122689d7e06c5b6b0883fe495db2bf"
+  integrity sha1-Ke/ML9ASJonX4GxbawiD/kldsr8=
 
-"@next/swc-linux-x64-musl@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.0.1.tgz#74cda49229d2a7fa421fee6b7dcd621a57934a5e"
-  integrity sha1-dM2kkinSp/pCH+5rfc1iGleTSl4=
+"@next/swc-linux-x64-musl@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.0.2.tgz#d68fdf6eefc57813fa91559c7089b49d6131ecab"
+  integrity sha1-1o/fbu/FeBP6kVWccIm0nWEx7Ks=
 
-"@next/swc-win32-arm64-msvc@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-13.0.1.tgz#15d6add92aa897148d6c45749bf9d2eacee87197"
-  integrity sha1-Fdat2SqolxSNbEV0m/nS6s7ocZc=
+"@next/swc-win32-arm64-msvc@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-13.0.2.tgz#acdcb3023045f60cca510f659a2349895e6405bd"
+  integrity sha1-rNyzAjBF9gzKUQ9lmiNJiV5kBb0=
 
-"@next/swc-win32-ia32-msvc@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.0.1.tgz#e0c57902fe75327d092abb1ef19657775fe26f85"
-  integrity sha1-4MV5Av51Mn0JKrse8ZZXd1/ib4U=
+"@next/swc-win32-ia32-msvc@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.0.2.tgz#a78ee9211471768febac9df915c2a8dbbcd05e41"
+  integrity sha1-p47pIRRxdo/rrJ35FcKo27zQXkE=
 
-"@next/swc-win32-x64-msvc@13.0.1":
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.0.1.tgz#469dde61519f6a310874af93ee5969f1d5ff6d03"
-  integrity sha1-Rp3eYVGfajEIdK+T7llp8dX/bQM=
+"@next/swc-win32-x64-msvc@13.0.2":
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.0.2.tgz#e86c2de910cd68a17974db5556d4588737412c68"
+  integrity sha1-6Gwt6RDNaKF5dNtVVtRYhzdBLGg=
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -482,10 +482,10 @@
   resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha1-i+NqH2bzJlOJ6QtfnJliFGdY9yg=
 
-"@ryan-blackman/ryan-bakes-cms@^1.0.15":
-  version "1.0.15"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@ryan-blackman/ryan-bakes-cms/-/ryan-bakes-cms-1.0.15.tgz#adf638727f74c3d76c10a91f1372c0cbd17a513d"
-  integrity sha1-rfY4cn90w9dsEKkfE3LAy9F6UT0=
+"@ryan-blackman/ryan-bakes-cms@^1.0.19":
+  version "1.0.19"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@ryan-blackman/ryan-bakes-cms/-/ryan-bakes-cms-1.0.19.tgz#727d0e34b33aeb6a8b2ef9685819a4c3c17fa158"
+  integrity sha1-cn0ONLM662qLLvloWBmkw8F/oVg=
   dependencies:
     sanity-codegen "^0.9.8"
 
@@ -577,7 +577,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^18.0.24":
+"@types/react@*":
   version "18.0.24"
   resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@types/react/-/react-18.0.24.tgz#2f79ed5b27f08d05107aab45c17919754cc44c20"
   integrity sha1-L3ntWyfwjQUQeqtFwXkZdUzETCA=
@@ -590,6 +590,15 @@
   version "17.0.52"
   resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@types/react/-/react-17.0.52.tgz#10d8b907b5c563ac014a541f289ae8eaa9bf2e9b"
   integrity sha1-ENi5B7XFY6wBSlQfKJro6qm/Lps=
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.0.25":
+  version "18.0.25"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/@types/react/-/react-18.0.25.tgz#8b1dcd7e56fe7315535a4af25435e0bb55c8ae44"
+  integrity sha1-ix3Nflb+cxVTWkryVDXgu1XIrkQ=
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1135,12 +1144,12 @@ escape-string-regexp@^4.0.0:
   resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha1-FLqDpdNz49MR5a/KKc9b+tllvzQ=
 
-eslint-config-next@^13.0.1:
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/eslint-config-next/-/eslint-config-next-13.0.1.tgz#9f346912f3b2451d6c8e9ac508b2f7a6893d9f16"
-  integrity sha1-nzRpEvOyRR1sjprFCLL3pok9nxY=
+eslint-config-next@^13.0.2:
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/eslint-config-next/-/eslint-config-next-13.0.2.tgz#7c87837821ea7468e018ca41f3bf6fa37d53db68"
+  integrity sha1-fIeDeCHqdGjgGMpB879vo31T22g=
   dependencies:
-    "@next/eslint-plugin-next" "13.0.1"
+    "@next/eslint-plugin-next" "13.0.2"
     "@rushstack/eslint-patch" "^1.1.3"
     "@typescript-eslint/parser" "^5.21.0"
     eslint-import-resolver-node "^0.3.6"
@@ -2080,40 +2089,40 @@ natural-compare@^1.4.0:
   resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-sanity@^1.0.5:
-  version "1.0.5"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/next-sanity/-/next-sanity-1.0.5.tgz#9ad7b0621e77d48ad0ee6b6b431c1c0d720e78ff"
-  integrity sha1-mtewYh531IrQ7mtrQxwcDXIOeP8=
+next-sanity@^1.0.8:
+  version "1.0.8"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/next-sanity/-/next-sanity-1.0.8.tgz#248927d6a4730e1aa82b21d8b90ced03f39de365"
+  integrity sha1-JIkn1qRzDhqoKyHYuQztA/Od42U=
   dependencies:
     "@sanity/client" "^3.4.1"
     "@sanity/groq-store" "^1.0.3"
     groq "^2.33.2"
 
-next@^13.0.1:
-  version "13.0.1"
-  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/next/-/next-13.0.1.tgz#8b4fc9998e58f503bdecb92f06fe6f850ac260d0"
-  integrity sha1-i0/JmY5Y9QO97LkvBv5vhQrCYNA=
+next@^13.0.2:
+  version "13.0.2"
+  resolved "https://rblackman24.pkgs.visualstudio.com/26a77d0f-d1ef-47bc-888e-7570fe1847f5/_packaging/RyanBakes/npm/registry/next/-/next-13.0.2.tgz#b8c8642c70f736ed91105645391d335fc51c8f62"
+  integrity sha1-uMhkLHD3Nu2REFZFOR0zX8Ucj2I=
   dependencies:
-    "@next/env" "13.0.1"
+    "@next/env" "13.0.2"
     "@swc/helpers" "0.4.11"
     caniuse-lite "^1.0.30001406"
     postcss "8.4.14"
     styled-jsx "5.1.0"
     use-sync-external-store "1.2.0"
   optionalDependencies:
-    "@next/swc-android-arm-eabi" "13.0.1"
-    "@next/swc-android-arm64" "13.0.1"
-    "@next/swc-darwin-arm64" "13.0.1"
-    "@next/swc-darwin-x64" "13.0.1"
-    "@next/swc-freebsd-x64" "13.0.1"
-    "@next/swc-linux-arm-gnueabihf" "13.0.1"
-    "@next/swc-linux-arm64-gnu" "13.0.1"
-    "@next/swc-linux-arm64-musl" "13.0.1"
-    "@next/swc-linux-x64-gnu" "13.0.1"
-    "@next/swc-linux-x64-musl" "13.0.1"
-    "@next/swc-win32-arm64-msvc" "13.0.1"
-    "@next/swc-win32-ia32-msvc" "13.0.1"
-    "@next/swc-win32-x64-msvc" "13.0.1"
+    "@next/swc-android-arm-eabi" "13.0.2"
+    "@next/swc-android-arm64" "13.0.2"
+    "@next/swc-darwin-arm64" "13.0.2"
+    "@next/swc-darwin-x64" "13.0.2"
+    "@next/swc-freebsd-x64" "13.0.2"
+    "@next/swc-linux-arm-gnueabihf" "13.0.2"
+    "@next/swc-linux-arm64-gnu" "13.0.2"
+    "@next/swc-linux-arm64-musl" "13.0.2"
+    "@next/swc-linux-x64-gnu" "13.0.2"
+    "@next/swc-linux-x64-musl" "13.0.2"
+    "@next/swc-win32-arm64-msvc" "13.0.2"
+    "@next/swc-win32-ia32-msvc" "13.0.2"
+    "@next/swc-win32-x64-msvc" "13.0.2"
 
 node-releases@^2.0.6:
   version "2.0.6"

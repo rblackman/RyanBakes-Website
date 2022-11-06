@@ -3,13 +3,17 @@ import { ReactNode, use } from 'react';
 import 'server-only';
 import '../styles/global.css';
 import '../styles/variables.css';
+import MainNav from './(components)/mainNav';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-	const { title, lang } = use(getSiteConfig());
+	const { lang } = use(getSiteConfig());
 
 	return (
 		<html lang={lang}>
-			<body>{children}</body>
+			<body>
+				<MainNav />
+				{children}
+			</body>
 		</html>
 	);
 }

@@ -5,6 +5,7 @@
 	--text: #000000;
 	--bg: #ffffff;
 	--bg-alt: #f0fdf8;
+	--card-shadow: #BFC9C6;
 
 	--primary: #0d19a3;
 	--primary_r: 13;
@@ -27,4 +28,6 @@
 	--bp_tablet: 1000px;
 	--bp_tablet_plus1: 1001px;
 	--bp_mobile: 768px;
+
+	--animation-duration: 0.2s;
 }

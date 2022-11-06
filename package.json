@@ -24,10 +24,10 @@
 	},
 	"dependencies": {
 		"@portabletext/react": "^2.0.0",
-		"@ryan-blackman/ryan-bakes-cms": "^1.0.15",
+		"@ryan-blackman/ryan-bakes-cms": "^1.0.19",
 		"clsx": "1.2.1",
-		"next": "^13.0.1",
-		"next-sanity": "^1.0.5",
+		"next": "^13.0.2",
+		"next-sanity": "^1.0.8",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-icons": "^4.6.0",
@@ -36,10 +36,10 @@
 	"devDependencies": {
 		"@portabletext/types": "^2.0.0",
 		"@types/node": "^18.11.9",
-		"@types/react": "^18.0.24",
+		"@types/react": "^18.0.25",
 		"@types/react-dom": "^18.0.8",
 		"eslint": "^8.26.0",
-		"eslint-config-next": "^13.0.1",
+		"eslint-config-next": "^13.0.2",
 		"prettier": "^2.7.1",
 		"typescript": "^4.8.4"
 	}

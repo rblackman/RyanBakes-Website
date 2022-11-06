@@ -1,8 +1,8 @@
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { use, useMemo } from 'react';
 import 'server-only';
-import styles from '../(styles)/tags.module.css';
 import { Props } from '../page';
+import styles from './(styles)/tags.module.css';
 import Tag from './tag';
 
 export default function Tags({ params: { slug } }: Props) {

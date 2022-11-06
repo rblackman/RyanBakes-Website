@@ -16,23 +16,11 @@
 	place-content: end start;
 }
 
-@media only screen and (min-resolution: 192dpi) {
-	.heroContainer {
-		background-image: var(--bgUrl-2x);
-	}
-}
-
 @media only screen and (max-width: 1921px) {
 	.heroContainer {
 		--hero-aspectRatio_W: 8;
 		--hero-aspectRatio_H: 3;
 		background-image: var(--bgUrl-desk);
-	}
-}
-
-@media only screen and (max-width: 1921px) and (min-resolution: 192dpi) {
-	.heroContainer {
-		background-image: var(--bgUrl-desk-2x);
 	}
 }
 
@@ -44,25 +32,11 @@
 	}
 }
 
-@media only screen and (max-width: 1000px) and (min-resolution: 192dpi) {
-	.heroContainer {
-		background-image: var(--bgUrl-tablet-2x);
-	}
-}
-
 @media only screen and (max-width: 768px) {
 	.heroContainer {
 		--hero-aspectRatio_W: 3;
 		--hero-aspectRatio_H: 4;
 		background-image: var(--bgUrl-mobile);
-	}
-}
-
-@media only screen and (max-width: 768px) and (min-resolution: 192dpi) {
-	.heroContainer {
-		--hero-aspectRatio_W: 3;
-		--hero-aspectRatio_H: 4;
-		background-image: var(--bgUrl-mobile-2x);
 	}
 }
 

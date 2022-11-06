@@ -3,7 +3,7 @@ import Block from 'app/(components)/block';
 import Heading from 'app/(components)/heading';
 import { SanityKeyed } from 'sanity-codegen';
 import 'server-only';
-import styles from '../(styles)/step.module.css';
+import styles from './(styles)/step.module.css';
 import IngredientAmount from './ingredientAmount';
 
 interface Props {
@@ -23,7 +23,7 @@ export default function Step({ ingredients, step: { title, content } }: Props) {
 				</ul>
 			)}
 			<div className={styles.directionsWrap}>
-				<Heading level={3} style={{ margin: 0 }}>
+				<Heading level={4} style={{ margin: 0 }}>
 					{title}
 				</Heading>
 				{content.map((block) => {

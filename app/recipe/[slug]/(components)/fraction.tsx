@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import 'server-only';
-import styles from '../(styles)/fraction.module.css';
+import styles from './(styles)/fraction.module.css';
 
 function FractionPart({ val }: { val: string }) {
 	const hasSlash = useMemo(() => val && val.length > 0 && val.indexOf('/') > 0, [val]);
