@@ -1,6 +1,5 @@
 import Heading from 'app/(components)/heading';
 import Image from 'app/(components)/image';
-import PortableText from 'app/(components)/portableText';
 import Tags from 'app/(components)/tags';
 import Link from 'next/link';
 import getRecipeById from 'queries/getRecipeById';
@@ -29,10 +28,7 @@ export default function SecondaryFeaturedRecipe({ id, index }: Props) {
 				<Link href={`/recipe/${slug}`}>{title}</Link>
 			</Heading>
 			<div className={styles.tags}>
-				<Tags tags={tags} noMargin />
-			</div>
-			<div className={styles.content}>
-				<PortableText value={commentary} />
+				<Tags tags={tags} noMargin small />
 			</div>
 		</div>
 	);

@@ -1,3 +1,4 @@
+import Heading from 'app/(components)/heading';
 import useImageBuilder from 'hooks/useImageBuilder';
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import { CSSProperties, use, useMemo } from 'react';
@@ -34,7 +35,9 @@ export default function Hero({ params: { slug } }: Props) {
 	return (
 		<div className={styles.heroContainer} style={containerStyle}>
 			<div className={styles.headingWrap}>
-				<h1 className={styles.heading}>{title}</h1>
+				<Heading level={2} className={styles.heading}>
+					{title}
+				</Heading>
 				<SubTitle params={{ slug }} />
 			</div>
 		</div>

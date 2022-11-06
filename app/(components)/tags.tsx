@@ -6,6 +6,7 @@ import Tag from './tag';
 interface Props {
 	tags: string[];
 	noMargin?: boolean;
+	small?: boolean;
 }
 
 export default function Tags({ tags, noMargin }: Props) {
@@ -13,7 +14,8 @@ export default function Tags({ tags, noMargin }: Props) {
 
 	const noMarginClass = noMargin === true ? styles.noMargin : null;
 	const mainClass = styles.tagList;
-	const className = `${mainClass} ${noMarginClass}`.trimEnd();
+	const smallClass = styles.small;
+	const className = `${mainClass} ${noMarginClass} ${smallClass}`.trimEnd();
 
 	return (
 		<ul className={className}>
@@ -25,5 +27,6 @@ export default function Tags({ tags, noMargin }: Props) {
 }
 
 Tags.defaultProps = {
-	noMargin: false
+	noMargin: false,
+	small: false
 };

@@ -45,3 +45,9 @@
 	align-items: center;
 	justify-content: flex-end;
 }
+
+@media only screen and (max-width: 640px) {
+	.siteName {
+		font-size: 1.25rem;
+	}
+}

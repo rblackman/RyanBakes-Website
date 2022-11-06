@@ -3,3 +3,12 @@ a.mainNavItem {
 	text-align: center;
 	display: block;
 }
+
+@media only screen and (max-width: 640px) {
+	a.mainNavItem {
+		font-size: 0.75rem;
+		min-width: 2.2rem;
+		text-align: center;
+		display: block;
+	}
+}

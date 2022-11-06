@@ -16,12 +16,5 @@
 }
 
 .tagLink_Svg {
-	width: 1.2rem;
-	height: 1.2rem;
-	margin-right: 0.125rem;
 	fill: var(--secondary);
-}
-
-.tagLink_Tag {
-	font-size: 0.75rem;
 }
