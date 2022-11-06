@@ -14,14 +14,14 @@ export default function Hero({ params: { slug } }: Props) {
 	const imageBuilder = useImageBuilder(asset);
 
 	const containerStyle = useMemo(() => {
-		const baseUrl = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 2000, aspectRatio: 7 / 2 });
-		const baseUrl2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 2000, aspectRatio: 7 / 2, dpr: 2 });
-		const desktop = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 8 / 3 });
-		const desktop2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 8 / 3, dpr: 2 });
-		const tablet = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1000, aspectRatio: 1 });
-		const tablet2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 1, dpr: 2 });
-		const mobile = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1000, aspectRatio: 1 });
-		const mobile2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 1, dpr: 2 });
+		const baseUrl = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 2000, aspectRatio: 7 / 2 });
+		const baseUrl2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 2000, aspectRatio: 7 / 2, dpr: 2 });
+		const desktop = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 1920, aspectRatio: 8 / 3 });
+		const desktop2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 1920, aspectRatio: 8 / 3, dpr: 2 });
+		const tablet = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 1000, aspectRatio: 1 });
+		const tablet2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 1000, aspectRatio: 1, dpr: 2 });
+		const mobile = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 768, aspectRatio: 1 });
+		const mobile2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', quality: 55, width: 768, aspectRatio: 1, dpr: 2 });
 
 		return {
 			'--bgUrl': `-webkit-image-set(url('${baseUrl}') 1x, url('${baseUrl2x}') 2x)`,
