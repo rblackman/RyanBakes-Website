@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import assertUnreachable from 'helpers/assertUnreachable';
 import { createElement, CSSProperties, ReactNode, useMemo } from 'react';
 import 'server-only';
@@ -7,9 +8,10 @@ interface Props {
 	children: ReactNode;
 	style?: CSSProperties | undefined;
 	sr?: boolean;
+	className?: string;
 }
 
-export default function Heading({ level, children, sr, style: inlineStyles }: Props) {
+export default function Heading({ level, children, sr, style: inlineStyles, className: providedClass }: Props) {
 	const heading = useMemo(() => {
 		switch (level) {
 			case 2:
@@ -25,10 +27,21 @@ export default function Heading({ level, children, sr, style: inlineStyles }: Pr
 		}
 	}, [level]);
 
+	const className = useMemo(() => {
+		const arr = new Array<string>();
+		if (providedClass && providedClass.length) {
+			arr.push(providedClass);
+		}
+		if (sr === true) {
+			arr.push('sr');
+		}
+		return clsx(arr);
+	}, [providedClass, sr]);
+
 	const props = useMemo(
 		() => ({
 			style: inlineStyles || {},
-			className: sr === true ? 'sr' : null
+			className
 		}),
 		[inlineStyles]
 	);

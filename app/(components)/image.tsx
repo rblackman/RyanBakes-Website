@@ -1,5 +1,6 @@
 'use client';
 import { ImageWithAlt } from '@ryan-blackman/ryan-bakes-cms';
+import clsx from 'clsx';
 import useImageBuilder from 'hooks/useImageBuilder';
 import NextImage, { ImageLoaderProps } from 'next/image';
 import { useCallback, useMemo } from 'react';
@@ -10,9 +11,10 @@ interface OptionalBaseProps {
 	blur: number;
 	crop: 'top,left' | 'top,right' | 'bottom,left' | 'bottom,right' | 'center' | 'focalpoint' | 'entropy';
 	fit: 'clip' | 'crop' | 'fill' | 'fillmax' | 'max' | 'scale' | 'min';
+	className?: string;
 }
 
-interface BaseProps extends OptionalBaseProps {
+interface BaseProps extends Partial<OptionalBaseProps> {
 	image: ImageWithAlt;
 	width: number;
 }
@@ -42,7 +44,8 @@ export default function Image(props: Props) {
 		quality: providedQuality,
 		blur,
 		crop,
-		fit
+		fit,
+		className
 	} = props;
 
 	const { baseUrl, buildUrlWithOptions } = useImageBuilder(asset);
@@ -70,12 +73,26 @@ export default function Image(props: Props) {
 		[buildUrlWithOptions, baseWidth, baseHeight]
 	);
 
+	const blurImageUrl = useMemo(() => {
+		const width = 20;
+		const height = 20 * aspectRatio;
+
+		return buildUrlWithOptions({ blur: 5, crop, fit, width, height, quality: 0.2 });
+	}, [buildUrlWithOptions, aspectRatio]);
+
 	// outer div is the container for our image
 	// it gets an aspect ratio and width.
 	// then the image is set to fill the container
 	return (
-		<div className={styles.image} style={{ width: baseWidth, aspectRatio: aspectRatio }}>
-			<NextImage src={baseUrl} loader={loader} fill alt={emptyAlt || !alt ? '' : alt} sizes={`(max-width: ${baseWidth}px) 100vw, ${baseWidth}px`} />
+		<div className={clsx(styles.image, className)} style={{ width: baseWidth, aspectRatio: aspectRatio }}>
+			<NextImage
+				src={baseUrl}
+				loader={loader}
+				fill
+				alt={emptyAlt || !alt ? '' : alt}
+				sizes={`(max-width: ${baseWidth}px) 100vw, ${baseWidth}px`}
+				placeholder="empty"
+			/>
 		</div>
 	);
 }

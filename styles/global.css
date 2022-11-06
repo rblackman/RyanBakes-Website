@@ -83,7 +83,6 @@ p {
 }
 
 a {
-	display: block;
 	color: var(--text);
 	text-decoration-color: var(--secondary);
 }
