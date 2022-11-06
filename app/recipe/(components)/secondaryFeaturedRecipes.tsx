@@ -8,16 +8,17 @@ interface Props {
 }
 
 export default function SecondaryFeaturedRecipes({ ids }: Props) {
-	return null;
-
 	return (
 		<>
 			<Heading level={3} sr>
 				Other Recipes
 			</Heading>
-			<div className={styles.otherStyles}>
-				{ids.map((id) => (
-					<SecondaryFeaturedRecipe key={id} id={id} />
+			<div className={styles.secondaryGrid}>
+				{ids.map((id, index) => (
+					<SecondaryFeaturedRecipe key={id} id={id} index={index} />
+				))}
+				{ids.map((id, index) => (
+					<SecondaryFeaturedRecipe key={`${id}-2`} id={id} index={index + 5} />
 				))}
 			</div>
 		</>

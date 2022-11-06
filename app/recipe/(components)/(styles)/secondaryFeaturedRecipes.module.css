@@ -1,1 +1,7 @@
-.otherStyles {}
+.secondaryGrid {
+	margin: 2rem 0 0 0;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}

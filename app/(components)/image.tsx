@@ -12,6 +12,7 @@ interface OptionalBaseProps {
 	crop: 'top,left' | 'top,right' | 'bottom,left' | 'bottom,right' | 'center' | 'focalpoint' | 'entropy';
 	fit: 'clip' | 'crop' | 'fill' | 'fillmax' | 'max' | 'scale' | 'min';
 	className?: string;
+	responsive?: boolean;
 }
 
 interface BaseProps extends Partial<OptionalBaseProps> {
@@ -45,7 +46,8 @@ export default function Image(props: Props) {
 		blur,
 		crop,
 		fit,
-		className
+		className,
+		responsive
 	} = props;
 
 	const { baseUrl, buildUrlWithOptions } = useImageBuilder(asset);
@@ -84,7 +86,7 @@ export default function Image(props: Props) {
 	// it gets an aspect ratio and width.
 	// then the image is set to fill the container
 	return (
-		<div className={clsx(styles.image, className)} style={{ width: baseWidth, aspectRatio: aspectRatio }}>
+		<div className={clsx(styles.image, className)} style={{ width: responsive ? '100%' : baseWidth, aspectRatio: aspectRatio }}>
 			<NextImage
 				src={baseUrl}
 				loader={loader}
