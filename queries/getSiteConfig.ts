@@ -1,13 +1,14 @@
 import { SiteConfig } from '@ryan-blackman/ryan-bakes-cms';
 import 'server-only';
 import Query from 'types/query';
-import buildGroqQuery from './buildGroqQuery';
+import buildGroqQuery from './lib/buildGroqQuery';
+import nextFetch from './lib/nextFetch';
 
 const siteConfigKey = process.env.SITE_CONFIG_KEY;
 
 export default async function getSiteConfig(): Promise<SiteConfig> {
 	const url = buildGroqQuery(`*[ _id == '${siteConfigKey}' ]`);
-	const response = await fetch(url);
+	const response = await nextFetch(url);
 	const { result } = (await response.json()) as Query<SiteConfig>;
 
 	if (result.length === 0) {

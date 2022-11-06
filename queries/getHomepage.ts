@@ -3,8 +3,6 @@ import 'server-only';
 import getPageById from './getPageById';
 import getSiteConfig from './getSiteConfig';
 
-const siteConfigKey = process.env.SITE_CONFIG_KEY;
-
 export default async function getHomepage(): Promise<Page> {
 	const {
 		homepage: { _ref: ref }
