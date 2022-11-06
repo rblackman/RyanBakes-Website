@@ -15,7 +15,7 @@ export default function Ingredients({ params: { slug } }: Props) {
 
 	return (
 		<>
-			<Heading level={2}>Ingredients</Heading>
+			<Heading level={3}>Ingredients</Heading>
 			<div className={styles.ingredientsTableWrap}>
 				<table className={styles.ingredientsTable}>
 					<thead className={styles.ingredientsTable_thead}>

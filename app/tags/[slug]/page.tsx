@@ -13,9 +13,9 @@ export default function Tag({ params: { slug } }: Props) {
 	const { result: recipes } = use(getRecipesByTag(slug));
 	return (
 		<>
-			<Heading level={2}>Tag: {slug}</Heading>
+			<Heading level={3}>Tag: {slug}</Heading>
 
-			<Heading level={3} sr>
+			<Heading level={4} sr>
 				Recipes
 			</Heading>
 			<ul>

@@ -19,9 +19,9 @@ function UnknownMark({ children, markType }: { children: ReactNode; markType: st
 
 const portableTextComponents: PortableTextComponents = {
 	block: {
-		h1: ({ children }) => <Heading level={1}>{children}</Heading>,
-		h2: ({ children }) => <Heading level={2}>{children}</Heading>,
-		h3: ({ children }) => <Heading level={3}>{children}</Heading>,
+		h1: ({ children }) => <Heading level={2}>{children}</Heading>,
+		h2: ({ children }) => <Heading level={3}>{children}</Heading>,
+		h3: ({ children }) => <Heading level={4}>{children}</Heading>,
 		normal: ({ children }) => <p>{children}</p>
 	},
 	marks: {

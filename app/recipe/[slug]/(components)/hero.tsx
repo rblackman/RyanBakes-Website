@@ -15,30 +15,19 @@ export default function Hero({ params: { slug } }: Props) {
 
 	const containerStyle = useMemo(() => {
 		const baseUrl = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 2000, aspectRatio: 7 / 2 });
-
 		const baseUrl2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 2000, aspectRatio: 7 / 2, dpr: 2 });
-
 		const desktop = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 8 / 3 });
-
 		const desktop2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 8 / 3, dpr: 2 });
-
 		const tablet = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1000, aspectRatio: 1 });
-
 		const tablet2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 1, dpr: 2 });
-
 		const mobile = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1000, aspectRatio: 1 });
-
 		const mobile2x = imageBuilder.buildUrlWithOptions({ crop: 'focalpoint', width: 1920, aspectRatio: 1, dpr: 2 });
 
 		return {
-			'--bgUrl': `url('${baseUrl}')`,
-			'--bgUrl-2x': `url('${baseUrl2x}')`,
-			'--bgUrl-desk': `url('${desktop}')`,
-			'--bgUrl-desk-2x': `url('${desktop2x}')`,
-			'--bgUrl-tablet': `url('${tablet}')`,
-			'--bgUrl-tablet-2x': `url('${tablet2x}')`,
-			'--bgUrl-mobile': `url('${mobile}')`,
-			'--bgUrl-mobile-2x': `url('${mobile2x}')`
+			'--bgUrl': `-webkit-image-set(url('${baseUrl}') 1x, url('${baseUrl2x}') 2x)`,
+			'--bgUrl-desk': `-webkit-image-set(url('${desktop}') 1x, url('${desktop2x}') 2x)`,
+			'--bgUrl-tablet': `-webkit-image-set(url('${tablet}') 1x, url('${tablet2x}') 2x)`,
+			'--bgUrl-mobile': `-webkit-image-set(url('${mobile}') 1x, url('${mobile2x}') 2x)`
 		} as CSSProperties;
 	}, [imageBuilder]);
 

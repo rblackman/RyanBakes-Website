@@ -5,7 +5,7 @@ import buildGroqQuery from './buildGroqQuery';
 
 const recipesPageKey = process.env.RECIPES_PAGE_KEY;
 
-export default async function getTagsPage(): Promise<RecipesPage> {
+export default async function getRecipesPage(): Promise<RecipesPage> {
 	const url = buildGroqQuery(`*[ _id == '${recipesPageKey}' ]`);
 	const response = await fetch(url);
 	const { result } = (await response.json()) as Query<RecipesPage>;

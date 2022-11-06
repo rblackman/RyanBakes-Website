@@ -7,10 +7,12 @@ export default function Page() {
 	const { title, content } = use(getHomepage());
 
 	return (
-		<div className="content">
-			{content.map((block) => (
-				<Block key={block._key} content={block} />
-			))}
-		</div>
+		<main>
+			<div className="content">
+				{content.map((block) => (
+					<Block key={block._key} content={block} />
+				))}
+			</div>
+		</main>
 	);
 }

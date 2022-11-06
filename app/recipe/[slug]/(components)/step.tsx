@@ -23,7 +23,7 @@ export default function Step({ ingredients, step: { title, content } }: Props) {
 				</ul>
 			)}
 			<div className={styles.directionsWrap}>
-				<Heading level={3} style={{ margin: 0 }}>
+				<Heading level={4} style={{ margin: 0 }}>
 					{title}
 				</Heading>
 				{content.map((block) => {

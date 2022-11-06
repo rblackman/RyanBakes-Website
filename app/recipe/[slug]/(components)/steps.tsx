@@ -21,7 +21,7 @@ export default function Steps({ params: { slug } }: Props) {
 
 	return (
 		<>
-			<Heading level={2}>Instructions</Heading>
+			<Heading level={3}>Instructions</Heading>
 			<div role="list">
 				{steps.map((step, i) => (
 					<Step key={step._key} step={step} ingredients={getIngredientsForIndex(i)} />
