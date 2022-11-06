@@ -1,21 +1,28 @@
+import Tags from 'app/(components)/tags';
 import getAllRecipeSlugs from 'queries/getAllRecipeSlugs';
+import getRecipeBySlug from 'queries/getRecipeBySlug';
+import { use } from 'react';
 import 'server-only';
 import Commentary from './(components)/commentary';
 import Hero from './(components)/hero';
 import Ingredients from './(components)/ingredients';
 import Steps from './(components)/steps';
-import Tags from './(components)/tags';
 
 export interface Props {
 	params: { slug: string };
 }
 
 export default function Page(props: Props) {
+	const {
+		params: { slug }
+	} = props;
+	const { tags } = use(getRecipeBySlug(slug));
+
 	return (
 		<main>
 			<Hero {...props} />
 			<div className="content">
-				<Tags {...props} />
+				<Tags tags={tags} />
 				<Commentary {...props} />
 				<Ingredients {...props} />
 				<Steps {...props} />

@@ -6,6 +6,7 @@ import styles from './(styles)/featuredRecipe.module.css';
 import Heading from './heading';
 import Image from './image';
 import PortableText from './portableText';
+import Tags from './tags';
 
 interface Props {
 	id: string;
@@ -16,6 +17,7 @@ export default function FeaturedRecipe({ id }: Props) {
 		title,
 		picture,
 		commentary,
+		tags,
 		slug: { current: slug }
 	} = use(getRecipeById(id));
 
@@ -23,15 +25,15 @@ export default function FeaturedRecipe({ id }: Props) {
 		<div className={styles.featuredRecipe}>
 			<Image image={picture} width={350} aspectRatio={1} className={styles.img} />
 			<Heading level={3} className={styles.heading}>
-				{title}
+				<Link href={`/recipe/${slug}`}>{title}</Link>
 			</Heading>
+			<div className={styles.tags}>
+				<Tags tags={tags} noMargin />
+			</div>
 			<div className={styles.blurb}>
 				<PortableText value={commentary} />
 				<PortableText value={commentary} />
 			</div>
-			<Link href={`/recipe/${slug}`} className={styles.cta}>
-				View
-			</Link>
 		</div>
 	);
 }

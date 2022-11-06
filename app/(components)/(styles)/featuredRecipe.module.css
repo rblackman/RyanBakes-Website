@@ -1,25 +1,30 @@
 .featuredRecipe {
-
-	box-shadow: 0 0 0.25rem 0.05rem var(--card-shadow);
+	--featured-padding: 0.75rem;
+	background: var(--bg-subtle);
+	box-shadow: var(--card-shadow);
 	max-width: 60rem;
-	padding: 0 1rem 0 0;
+	padding: 0 var(--featured-padding) 0 0;
 	display: grid;
 	grid-template-columns: max-content 1fr;
-	grid-template-rows: min-content 1fr min-content;
-	grid-template-areas: 'img title' 'img blurb' 'image cta';
-	grid-gap: 0.5rem 1rem;
+	grid-template-rows: min-content min-content 1fr;
+	grid-template-areas: 'img title' 'img tags' 'img blurb';
+	grid-gap: var(--featured-padding);
 	max-height: 350px;
 	overflow: hidden;
 }
-
 
 .img {
 	grid-area: img;
 }
 
+.tags {
+	grid-area: tags;
+
+}
+
 .heading:is(h1, h2, h3) {
 	grid-area: title;
-	margin: 0;
+	margin: var(--featured-padding) 0 0 0;
 }
 
 .blurb {
@@ -36,21 +41,6 @@
 	box-orient: vertical;
 	overflow: hidden;
 	max-height: 10rem;
-}
-
-.cta {
-	grid-area: cta;
-	align-self: flex-end;
-	justify-self: flex-end;
-	margin: 0 0 1rem 0;
-	padding: 0.4rem 1rem 0.5rem 1rem;
-	display: block;
-	width: 100%;
-	max-width: 6rem;
-	text-align: center;
-	background-color: var(--primary);
-	color: var(--primary-contrast);
-	text-decoration: transparent;
 }
 
 

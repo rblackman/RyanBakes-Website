@@ -5,6 +5,10 @@
 	margin: 0 0 clamp(5vh, 3rem, 50vh);
 }
 
+.noMargin {
+	margin-bottom: 0 !important;
+}
+
 .tagList li+li {
 	margin-left: 1rem;
 }
