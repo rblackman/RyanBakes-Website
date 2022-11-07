@@ -13,6 +13,7 @@ interface OptionalBaseProps {
 	fit: 'clip' | 'crop' | 'fill' | 'fillmax' | 'max' | 'scale' | 'min';
 	className?: string;
 	responsive?: boolean;
+	priority?: boolean;
 }
 
 interface BaseProps extends Partial<OptionalBaseProps> {
@@ -47,7 +48,8 @@ export default function Image(props: Props) {
 		crop,
 		fit,
 		className,
-		responsive
+		responsive,
+		priority
 	} = props;
 
 	const { baseUrl, buildUrlWithOptions } = useImageBuilder(asset);
@@ -91,6 +93,7 @@ export default function Image(props: Props) {
 				src={baseUrl}
 				loader={loader}
 				fill
+				priority={priority ?? false}
 				alt={emptyAlt || !alt ? '' : alt}
 				sizes={`(max-width: ${baseWidth}px) 100vw, ${baseWidth}px`}
 				placeholder="empty"

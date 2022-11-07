@@ -10,9 +10,10 @@ import Tags from './tags';
 
 interface Props {
 	id: string;
+	priority?: boolean;
 }
 
-export default function FeaturedRecipe({ id }: Props) {
+export default function FeaturedRecipe({ id, priority }: Props) {
 	const {
 		title,
 		picture,
@@ -23,7 +24,7 @@ export default function FeaturedRecipe({ id }: Props) {
 
 	return (
 		<div className={styles.featuredRecipe}>
-			<Image image={picture} width={350} aspectRatio={1} className={styles.img} />
+			<Image image={picture} width={350} aspectRatio={1} className={styles.img} priority={priority === true} />
 			<Heading level={3} className={styles.heading}>
 				<Link href={`/recipe/${slug}`}>{title}</Link>
 			</Heading>
@@ -37,3 +38,7 @@ export default function FeaturedRecipe({ id }: Props) {
 		</div>
 	);
 }
+
+FeaturedRecipe.defaultProps = {
+	priority: false
+};

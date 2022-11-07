@@ -22,7 +22,7 @@ export default function Page() {
 					<PortableText value={intro} />
 				</div>
 
-				<FeaturedRecipe id={featuredId} />
+				<FeaturedRecipe id={featuredId} priority />
 
 				<SecondaryFeaturedRecipes ids={secondaryFeatured.map(({ _ref }) => _ref)} />
 			</div>
