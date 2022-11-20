@@ -17,9 +17,6 @@ export default function SecondaryFeaturedRecipes({ ids }: Props) {
 				{ids.map((id, index) => (
 					<SecondaryFeaturedRecipe key={id} id={id} index={index} />
 				))}
-				{ids.map((id, index) => (
-					<SecondaryFeaturedRecipe key={`${id}-2`} id={id} index={index + 5} />
-				))}
 			</div>
 		</>
 	);
