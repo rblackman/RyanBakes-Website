@@ -4,10 +4,6 @@ import getSiteConfig from 'queries/getSiteConfig';
 import { use, useMemo } from 'react';
 import 'server-only';
 
-function Test({ name, value }: { name: string; value: string }) {
-	return <span dangerouslySetInnerHTML={{ __html: `<meta name="${name}" content="${value}" />` }}></span>;
-}
-
 export default function Head({ params: { slug } }: { params: { slug: string } }) {
 	const { title: siteTitle } = use(getSiteConfig());
 	const {
@@ -38,9 +34,7 @@ export default function Head({ params: { slug } }: { params: { slug: string } })
 			{tags.map((tag) => (
 				<meta name="article:tag" content={tag} key={tag} />
 			))}
-			{/*
-			<Test name="og:image" value={ogImage} /> */}
-
+			<meta property="og:image" content={ogImage} />
 			<meta property="og:image:width" content="1200" />
 			<meta property="og:image:height" content="627" />
 		</>
