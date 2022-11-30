@@ -4,7 +4,7 @@ import 'server-only';
 import Block from './(components)/block';
 
 export default function Page() {
-	const { title, content } = use(getHomepage());
+	const { content } = use(getHomepage());
 
 	return (
 		<main>

@@ -1,17 +1,48 @@
+import useImageBuilder from 'hooks/useImageBuilder';
 import getRecipeBySlug from 'queries/getRecipeBySlug';
 import getSiteConfig from 'queries/getSiteConfig';
-import { use } from 'react';
+import { use, useMemo } from 'react';
 import 'server-only';
+
+function Test({ name, value }: { name: string; value: string }) {
+	return <span dangerouslySetInnerHTML={{ __html: `<meta name="${name}" content="${value}" />` }}></span>;
+}
 
 export default function Head({ params: { slug } }: { params: { slug: string } }) {
 	const { title: siteTitle } = use(getSiteConfig());
-	const { title: recipeTitle } = use(getRecipeBySlug(slug));
+	const {
+		title: recipeTitle,
+		description,
+		tags,
+		_createdAt: created,
+		_updatedAt: updated,
+		openGraphImage: { asset }
+	} = use(getRecipeBySlug(slug));
+	const keywords = useMemo(() => tags.join(','), [tags]);
 
 	const combinedTitle = `${siteTitle} | ${recipeTitle}`;
-
+	const ogImage = useImageBuilder(asset).buildUrlWithOptions({
+		width: 1200,
+		height: 627,
+		quality: 0.6
+	});
 	return (
 		<>
 			<title>{combinedTitle}</title>
+			<meta name="description" content={description} />
+			<meta name="keywords" content={keywords} />
+			<meta name="og:title" content={recipeTitle} />
+			<meta name="og:type" content="article" />
+			<meta name="article:published_time" content={created} />
+			<meta name="article:modified_time" content={updated} />
+			{tags.map((tag) => (
+				<meta name="article:tag" content={tag} key={tag} />
+			))}
+			{/*
+			<Test name="og:image" value={ogImage} /> */}
+
+			<meta property="og:image:width" content="1200" />
+			<meta property="og:image:height" content="627" />
 		</>
 	);
 }

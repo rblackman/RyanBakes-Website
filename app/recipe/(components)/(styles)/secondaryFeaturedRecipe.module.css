@@ -60,7 +60,7 @@
 
 .content p {
 	text-overflow: ellipsis;
-	display: box;
+	display: flex;
 	display: -webkit-box;
 	-webkit-line-clamp: 4;
 	line-clamp: 4;

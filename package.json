@@ -24,7 +24,7 @@
 	},
 	"dependencies": {
 		"@portabletext/react": "^2.0.0",
-		"@ryan-blackman/ryan-bakes-cms": "^1.0.20",
+		"@ryan-blackman/ryan-bakes-cms": "^1.0.21",
 		"clsx": "1.2.1",
 		"next": "^13.0.4",
 		"next-sanity": "^2.0.2",

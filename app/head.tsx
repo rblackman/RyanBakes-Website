@@ -5,5 +5,9 @@ import 'server-only';
 export default function Head() {
 	const { title: siteTitle } = use(getSiteConfig());
 
-	return <title>{siteTitle}</title>;
+	return (
+		<>
+			<title>{siteTitle}</title>
+		</>
+	);
 }
