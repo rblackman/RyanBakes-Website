@@ -1,6 +1,7 @@
 import assertUnreachable from 'helpers/assertUnreachable';
 import 'server-only';
 import type { InlineImage, RecipePreview, SanityKeyed, TextSection } from 'types/sanity-schema';
+import ImageSectionComponent from './(blockTypes)/imageSection';
 import TextSectionComponent from './(blockTypes)/textSection';
 
 interface Props {
@@ -11,7 +12,7 @@ export default function Block({ content }: Props) {
 	const { _type: type } = content;
 	switch (type) {
 		case 'inlineImage':
-			return <p>IMG</p>;
+			return <ImageSectionComponent value={content as InlineImage} />;
 		case 'textSection':
 			return <TextSectionComponent value={content as TextSection} />;
 		case 'recipePreview':
