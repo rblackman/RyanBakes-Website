@@ -1,5 +1,5 @@
-import type { TextSection } from '@ryan-blackman/ryan-bakes-cms';
 import 'server-only';
+import type { TextSection } from 'types/sanity-schema';
 import PortableText from '../portableText';
 
 export interface Props {

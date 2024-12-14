@@ -1,6 +1,6 @@
-import type { InlineImage, RecipePreview, SanityKeyed, TextSection } from '@ryan-blackman/ryan-bakes-cms';
 import assertUnreachable from 'helpers/assertUnreachable';
 import 'server-only';
+import type { InlineImage, RecipePreview, SanityKeyed, TextSection } from 'types/sanity-schema';
 import TextSectionComponent from './(blockTypes)/textSection';
 
 interface Props {

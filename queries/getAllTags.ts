@@ -1,7 +1,7 @@
-import { Recipe } from '@ryan-blackman/ryan-bakes-cms';
 import Distinct from 'helpers/distinct';
 import 'server-only';
 import Query from 'types/query';
+import { Recipe } from 'types/sanity-schema';
 import buildGroqQuery from './lib/buildGroqQuery';
 import nextFetch from './lib/nextFetch';
 

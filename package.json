@@ -24,14 +24,18 @@
 	},
 	"dependencies": {
 		"@portabletext/react": "^2.0.0",
-		"@ryan-blackman/ryan-bakes-cms": "^1.0.21",
 		"clsx": "1.2.1",
 		"next": "^13.0.4",
 		"next-sanity": "^2.0.2",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-icons": "^4.6.0",
+		"sanity-codegen": "^0.9.8",
 		"server-only": "^0.0.1"
+	},
+	"engines": {
+		"node": ">=20.11.0",
+		"npm": ">=10.7.0"
 	},
 	"devDependencies": {
 		"@portabletext/types": "^2.0.0",

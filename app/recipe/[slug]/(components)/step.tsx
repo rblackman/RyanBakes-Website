@@ -1,8 +1,8 @@
-import { Ingredient as IngredientType, Step as SanityStep } from '@ryan-blackman/ryan-bakes-cms';
 import Block from 'app/(components)/block';
 import Heading from 'app/(components)/heading';
 import { SanityKeyed } from 'sanity-codegen';
 import 'server-only';
+import { Ingredient as IngredientType, Step as SanityStep } from 'types/sanity-schema';
 import styles from './(styles)/step.module.css';
 import IngredientAmount from './ingredientAmount';
 

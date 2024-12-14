@@ -1,9 +1,9 @@
 'use client';
-import { ImageWithAlt } from '@ryan-blackman/ryan-bakes-cms';
 import clsx from 'clsx';
 import useImageBuilder from 'hooks/useImageBuilder';
 import NextImage, { ImageLoaderProps } from 'next/image';
 import { useCallback, useMemo } from 'react';
+import { ImageWithAlt } from 'types/sanity-schema';
 import styles from './(styles)/image.module.css';
 
 interface OptionalBaseProps {

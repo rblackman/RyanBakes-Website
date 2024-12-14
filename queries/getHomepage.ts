@@ -1,5 +1,5 @@
-import { Page } from '@ryan-blackman/ryan-bakes-cms';
 import 'server-only';
+import { Page } from 'types/sanity-schema';
 import getPageById from './getPageById';
 import getSiteConfig from './getSiteConfig';
 

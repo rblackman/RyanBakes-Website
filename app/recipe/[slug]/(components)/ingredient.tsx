@@ -1,6 +1,6 @@
-import { Ingredient as IngredientType } from '@ryan-blackman/ryan-bakes-cms';
 import { SanityKeyed } from 'sanity-codegen';
 import 'server-only';
+import { Ingredient as IngredientType } from 'types/sanity-schema';
 import styles from './(styles)/ingredient.module.css';
 import IngredientAmount from './ingredientAmount';
 

@@ -1,5 +1,5 @@
-import { SanityImageAsset, SanityReference } from '@ryan-blackman/ryan-bakes-cms';
 import { useCallback, useMemo } from 'react';
+import { SanityImageAsset, SanityReference } from 'types/sanity-schema';
 
 const sanityKey = process.env.NEXT_PUBLIC_SANITY_KEY;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;

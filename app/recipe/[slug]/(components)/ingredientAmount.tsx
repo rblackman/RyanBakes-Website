@@ -1,8 +1,9 @@
-import { SanityReference, Unit } from '@ryan-blackman/ryan-bakes-cms';
 import Fraction from 'app/recipe/[slug]/(components)/fraction';
 import getAllUnits from 'queries/getAllUnits';
 import { use } from 'react';
+import type { SanityReference } from 'sanity-codegen';
 import 'server-only';
+import type { Unit } from 'types/sanity-schema';
 
 interface UnitDisplayProps extends Pick<Unit, 'name' | 'abbreviation' | 'noUnit'> {
 	full: boolean;
@@ -45,7 +46,8 @@ export default function IngredientAmount({ amount, unit: { _ref: unitRef }, full
 
 	return (
 		<>
-			{unitNode} {amountNode}
+			{amountNode}
+			{unitNode}
 		</>
 	);
 }
