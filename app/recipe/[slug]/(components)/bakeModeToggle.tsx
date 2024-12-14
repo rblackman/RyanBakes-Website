@@ -19,7 +19,12 @@ export default function BakeModeToggle() {
 		setHasWakeLockSupport(true);
 
 		try {
-			const lock = await navigator.wakeLock.request('screen');
+			const lock = await navigator.wakeLock?.request('screen');
+
+			if (!lock) {
+				console.error('Failed to acquire wake lock.');
+				return;
+			}
 			setWakeLock(lock);
 			console.log('Wake lock is active.');
 
