@@ -37,7 +37,7 @@
 	},
 	"devDependencies": {
 		"@portabletext/types": "^4.0.1",
-		"@vercel/toolbar": "^0.1.41",
+		"@vercel/toolbar": "^0.2.1",
 		"dotenv": "^17.2.3",
 		"next-devtools-mcp": "^0.3.10"
 	}
