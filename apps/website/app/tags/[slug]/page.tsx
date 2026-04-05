@@ -1,11 +1,13 @@
+import FeaturedRecipe from "@components/features/recipe/featured-recipe";
 import Heading from "@components/ui/heading";
 import buildCanonicalUrl from "@helpers/build-canonical-url";
 import resolveParams from "@helpers/resolve-params";
 import getRecipesByTag from "@queries/live/getRecipesByTag";
 import getAllTags from "@queries/static/getAllTags";
+import type { Recipe } from "@ryan-bakes/sanity-types";
 import type { Metadata } from "next";
-import Link from "next/link";
 import "server-only";
+import SecondaryFeaturedRecipes from "../../recipe/features/secondary-featured-recipes";
 
 type RouteParams = Readonly<{ slug: string }>;
 
@@ -54,31 +56,21 @@ export default async function Tag({ params }: Props) {
 
 	const recipes = await getRecipesByTag(slug);
 
+	const featuredRecipe = recipes[0];
+	const secondaryRecipes = recipes
+		.slice(1)
+		.map((recipe, index): { recipe: Recipe; index: number } => ({ recipe, index }));
+
 	return (
 		<main>
 			<div className="content">
 				<Heading level={2}>Tag: {tagTitle}</Heading>
 
-				<Heading level={3} sr>
-					Recipes tagged with {tagTitle}
-				</Heading>
-
 				{recipes.length > 0 ? (
-					<ul>
-						{recipes.map(({ _id: id, title, slug: recipeSlug }) => {
-							const recipeSlugValue = recipeSlug?.current;
-
-							if (!recipeSlugValue) {
-								return null;
-							}
-
-							return (
-								<li key={id}>
-									<Link href={`/recipe/${recipeSlugValue}`}>{title ?? "Untitled"}</Link>
-								</li>
-							);
-						})}
-					</ul>
+					<>
+						<FeaturedRecipe recipe={featuredRecipe} priority large />
+						{secondaryRecipes.length > 0 && <SecondaryFeaturedRecipes recipes={secondaryRecipes} />}
+					</>
 				) : (
 					<p>No recipes available for this tag yet.</p>
 				)}
