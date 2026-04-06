@@ -17,3 +17,4 @@
 - Validation rules live only in schema files, not in the website.
 - Content types include: `recipe`, `unit`, `ingredient`, `portableText`, `imageWithAlt`.
 - Units are documents; ingredients reference units; resolution happens at render time.
+- `validate:env` script in `apps/website/package.json` must use relative paths and no `pnpm -w exec` wrapper. Root cause: using `pnpm -w exec tsx --require dotenv/config` ran Node from the workspace root, where `dotenv` is not installed. Fix (Option B): changed to `tsx --require dotenv/config scripts/validate-env.ts dotenv_config_path=.env` — pnpm already runs the script in the package's own directory (`apps/website`), so dotenv resolves correctly from `apps/website/node_modules`.
