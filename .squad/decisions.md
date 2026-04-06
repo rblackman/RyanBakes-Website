@@ -42,6 +42,25 @@ tsx --require dotenv/config scripts/validate-env.ts dotenv_config_path=.env
 - Removed: `FeaturedRecipe`, `SecondaryFeaturedRecipes`, `PortableText`, `Tags`, multi-phase fetch.
 - Rationale: Simpler, faster, better suited for discovery browsing.
 
+### 3. Accessibility as First-Class Concern
+
+**Date:** 2026-04-06  
+**Author:** Ryan Blackman (via Copilot)  
+**Status:** Accepted
+
+**Context:** User directive to ensure accessibility is a core part of all new features, not an afterthought.
+
+**Decision:** All new features on the website must be implemented with accessibility in mind from the start. Semantic HTML, keyboard navigation, visible focus styles, meaningful alt text, screen reader support, and color contrast are non-negotiable for every UI change.
+
+**Rationale:** Accessibility benefits all users and reflects a commitment to inclusive design practices.
+
+**Scope:** 
+- **Dallas** — Primary: frontend implementation with semantic HTML, keyboard nav, focus styles, alt text, ARIA, color contrast, motion considerations
+- **Lambert** — Include accessibility checks in quality reviews
+- **Ripley** — Flag accessibility concerns during architecture decisions that affect UI
+
+---
+
 ## Governance
 
 - All meaningful changes require team consensus

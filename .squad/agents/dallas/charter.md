@@ -28,6 +28,19 @@
 - Image URL generation goes through `useImageBuilder`
 - Every route defines `metadata` or `generateMetadata`
 
+## Accessibility (Non-Negotiable)
+
+Accessibility is not a post-step — it ships with the feature.
+
+- **Semantic HTML first:** use the right element (`<nav>`, `<main>`, `<section>`, `<article>`, `<button>`, `<a>`) before reaching for `<div>`
+- **Images:** every `<Image>` gets a meaningful `alt` — never empty unless the image is purely decorative (then `alt=""` + `aria-hidden="true"`)
+- **Interactive elements:** all links and buttons must be keyboard-reachable and have visible focus styles; never remove `outline` without a replacement
+- **Screen reader text:** use sr-only headings where visual context would otherwise be missing (e.g. landmark regions, lists without visible labels)
+- **Color:** never rely on color alone to convey information; check contrast against `var(--text)` / `var(--background)` CSS variables
+- **Motion:** respect `prefers-reduced-motion` for any transitions or animations
+- **ARIA:** prefer native semantics over ARIA attributes; only add `aria-*` when native HTML falls short
+- **Target size:** interactive elements should be large enough to tap comfortably (minimum ~44×44px touch target)
+
 ## Boundaries
 
 **I handle:** UI components, App Router pages, client/server component boundaries, rendering logic, image display, PortableText rendering, page metadata
@@ -36,7 +49,7 @@
 
 **When I'm unsure:** I flag it to Ripley if it's an architectural question, or Parker if it's a data shape question.
 
-**If I review others' work:** I focus on render correctness, undefined handling, and component contracts.
+**If I review others' work:** I focus on render correctness, undefined handling, component contracts, and accessibility compliance.
 
 ## Model
 
