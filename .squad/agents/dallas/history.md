@@ -24,3 +24,10 @@
 - Every route must define `metadata` or `generateMetadata`.
 - Component props use `type` aliases with `Readonly<>` — not interfaces.
 - `throwError` / `throwTypedError` helpers are in `apps/website/` for error cases.
+
+### Tags Page Simplification (2026-04)
+- **`/tags/page.tsx`**: Reverted Recipe Page mirror to a simple counted tag list. Calls `getTagsPage()` + `getTagsWithCounts()` in one `Promise.all`. Renders: page heading from CMS (`tagsPage.title ?? "Tags"`), then a flex-wrap `<ul>` of every tag with its recipe count.
+- **`getTagsWithCounts`** (`apps/website/queries/static/getTagsWithCounts.ts`): Same GROQ as `getAllTags` (`*[_type == "recipe"]{ tags }`), but aggregates counts with a `Map` in TypeScript and returns `{ tag: string; count: number }[]` sorted alphabetically. Sanity GROQ has no reliable per-tag count aggregation.
+- **`TagWithCount`**: Lightweight local component (co-located in `page.tsx`, no separate file). Renders a `<li>` with icon + link + muted count `(n)` span. Uses a new co-located CSS module (`tags-page.module.css`) rather than modifying shared `tag.module.css` or `tags.module.css`.
+- **Do not reuse `<Tag>` as a building block for counted items** — `Tag` renders a full `<li>` so it can't be composed inside another `<li>` with sibling elements. Duplicate the minimal markup in the local component instead.
+- `tags-page.module.css` mirrors the visual language of `tags.module.css` (flex-wrap, gap, font size) but adds `.tagItem`, `.tagLink`, `.tagIcon`, and `.count` for the counted variant.
