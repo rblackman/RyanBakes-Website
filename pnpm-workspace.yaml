@@ -3,7 +3,9 @@ packages:
   - "packages/*"
 
 onlyBuiltDependencies:
+  - '@bradygaster/squad-cli'
   - core-js
   - esbuild
+  - protobufjs
   - sharp
   - unrs-resolver
