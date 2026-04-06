@@ -25,12 +25,22 @@ tsx --require dotenv/config scripts/validate-env.ts dotenv_config_path=.env
 **Date:** 2026-04  
 **Status:** Implemented
 
-**Decisions:**
+**Initial Decisions:**
 - `/tags/[slug]/page.tsx`: Use `FeaturedRecipe` (first recipe) + `SecondaryFeaturedRecipes` (rest), matching `/recipe/page.tsx` pattern.
 - `/tags/page.tsx`: Two-phase data fetch — phase 1 gets `getTagsPage()` + `getAllTags()`, phase 2 fetches tag recipes.
 - `formatTagTitle`: Copy into `tags/page.tsx` rather than extract shared utility (4-line function, UI-only task scope).
 - Secondary tag sections: Cap at 3 recipes per section using `.slice(0, 3)`.
 - `<Tags>` chip cloud: Keep at page bottom for comprehensive discovery.
+
+**Revision (2026-04-06):**
+- `/tags/page.tsx` simplified to counted tag list (no Recipe Page mirror).
+- Single-phase fetch: `Promise.all([getTagsPage(), getTagsWithCounts()])`.
+- Page displays alphabetically-sorted tags with recipe counts: `Tag Name (n)`.
+- New query: `getTagsWithCounts()` — aggregates recipe counts per tag, returns `{ tag: string; count: number }[]`.
+- New CSS module: `apps/website/app/tags/tags-page.module.css` (co-located, not shared).
+- Local `TagWithCount` component in `page.tsx`, page-specific (not extracted).
+- Removed: `FeaturedRecipe`, `SecondaryFeaturedRecipes`, `PortableText`, `Tags`, multi-phase fetch.
+- Rationale: Simpler, faster, better suited for discovery browsing.
 
 ## Governance
 
